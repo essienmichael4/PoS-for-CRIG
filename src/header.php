@@ -32,7 +32,7 @@
                         }else{
                             echo '<li><a href="?pgname=dashboardbody" class="linkItem"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>';
                         }
-                        if($_GET['pgname']=="inventorybody"){
+                        if($_GET['pgname']=="inventorybody" || $_GET['pgname']=="edit"){
                             echo '<li><a href="?pgname=inventorybody" class="linkItem active"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
                         }else{
                             echo '<li><a href="?pgname=inventorybody" class="linkItem"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';

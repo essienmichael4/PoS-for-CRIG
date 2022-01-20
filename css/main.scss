@@ -596,21 +596,20 @@ main .inventory{
                     justify-content: space-between;
                     width: 100%;
 
-                    form{
-                        // width: 50%;
-                        // height: 100%;
+                    
 
-                        button{
-                            outline: none;
-                            cursor: pointer;
-                            border: none;
-                            text-transform: uppercase;
-                            background-color: $secondarylight;
-                            color: $accentcolor;
-                            padding: .5rem 2.2rem;
+                    a{
+                        outline: none;
+                        cursor: pointer;
+                        border: none;
+                        text-transform: uppercase;
+                        background-color: $secondarylight;
+                        color: $accentcolor;
+                        padding: .5rem 2.2rem;
+                        margin-bottom: 0;
 
-                        }
                     }
+                    
                     button{
                         outline: none;
                         cursor: pointer;

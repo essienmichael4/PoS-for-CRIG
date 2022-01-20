@@ -31,15 +31,9 @@
                         </div>
 
                         <div class="btn">
-                            <form action="./pgname=edit.php">
-                            <input type="text" class="productId" value="'.
-                            $products["id"]
-                            .'" hidden>
-                            <input type="text" class="productImage" value="'.
-                            $products["productPic"]
-                            .'" hidden>
-                            <button>edit</button>
-                            </form>
+                            
+                            <a href="?pgname=edit&id='.$products["id"].'">edit</a>
+                            
                             <button>delete</button>
                         </div>
                     </li>';

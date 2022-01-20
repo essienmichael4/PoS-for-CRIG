@@ -665,7 +665,7 @@ main .inventory .inventory-items ul .existing-products .btn {
   width: 100%;
 }
 
-main .inventory .inventory-items ul .existing-products .btn form button {
+main .inventory .inventory-items ul .existing-products .btn a {
   outline: none;
   cursor: pointer;
   border: none;
@@ -673,6 +673,7 @@ main .inventory .inventory-items ul .existing-products .btn form button {
   background-color: #20b2aa;
   color: #fff;
   padding: .5rem 2.2rem;
+  margin-bottom: 0;
 }
 
 main .inventory .inventory-items ul .existing-products .btn button {
