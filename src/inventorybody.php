@@ -60,5 +60,6 @@
 
         </main>
 
-        <script src="../js/util.js"></script>
         <script src="../js/getInventoryProducts.js"></script>
+        <script src="../js/util.js"></script>
+        

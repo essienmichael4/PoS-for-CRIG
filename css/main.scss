@@ -802,3 +802,204 @@ main .dashboard{
 
     }
 }
+
+.editPage{
+    width: calc(100vw - 220px);
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s ease;
+
+    .productcontainer{
+        width: 30%;
+        height: 100%;
+        // background-color: blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        header{
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .edit-products{
+            margin-top: 2rem;
+            width: 80%;
+            height: 57%;
+            display: flex;
+            padding: 1rem 0 2rem 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 1rem;
+            // border: 1px solid $secondarylight;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: .7);
+            
+            .img{
+                background-color: red;
+                width: 80%;
+                height: 220px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin: .5rem;
+
+                img{
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                }
+            }
+
+            .productSummary{
+                width: 90%;
+                text-align: center;
+                // background-color: $secondarylight;
+
+                h4{
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                }
+
+                h2{
+                    display: inline-block;
+                }
+                p{
+                    display: inline-block;
+                    font-size: .8rem;
+                }
+            }
+            
+            
+            .btn{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                
+
+                a{
+                    outline: none;
+                    cursor: pointer;
+                    border: none;
+                    text-transform: uppercase;
+                    background-color: $secondarylight;
+                    color: $accentcolor;
+                    padding: .5rem 2.2rem;
+                    margin-bottom: 0;
+
+                }
+                
+                button{
+                    outline: none;
+                    cursor: pointer;
+                    border: none;
+                    text-transform: uppercase;
+                    background-color: $secondarylight;
+                    color: $accentcolor;
+
+                    &:nth-child(2){
+                        background-color: red;
+                        padding: .5rem 1.5rem;
+                    }
+
+                    &:nth-child(1){
+                        padding: .5rem 2.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .editContainer{
+        width: 68%;
+        height: 100%;
+        // background-color: white;
+        padding: 4rem 0  4rem 5rem;
+        
+
+        .innerContainer{
+            height: 100%;
+            width: 70%;
+            background-color: rgba($color: #000000, $alpha: .3);
+            padding: 2rem 2rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+
+            label{
+                margin-bottom: .5rem;
+                font-size: .8rem;
+                color: $accentcolor;
+            }
+
+            input{
+                width: 100%;
+                margin-bottom: 2.5rem;
+                padding: .5rem;
+                outline: none;
+                border-radius: 5px;
+                border: none;
+            }
+
+            select{
+                padding: .3rem .5rem;
+                width: 30%;
+                margin-bottom: 2rem;
+                cursor: pointer;
+                border-radius: 4px;
+
+                &:focus,&:hover{
+                    outline: none;
+                    border: 1px solid $secondarylight;
+                }
+
+                option{
+                    cursor: pointer;
+                    padding: .5rem 1rem;
+                    border-radius: 0px;
+                }
+            }
+
+            div{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+
+                div{
+                    // display: block;
+                    display: flex;
+                    flex-direction: column;
+                    width: 40%;
+                }
+            }
+
+            
+
+            input[type=file]{
+                background-color: $accentcolor;
+            }
+
+            .btn{
+                margin-top: 2rem;
+                display: flex;
+
+                button,a{
+                    margin-top: 0rem;
+                    padding: .7rem;
+                    outline: none;
+                    border: none;
+                    background-color: rgba($color: #000000, $alpha: 1);
+                    font-weight: medium;
+                    line-height: 1.2rem;
+                    color: #fff;
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}

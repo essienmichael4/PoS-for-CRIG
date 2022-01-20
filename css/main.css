@@ -884,4 +884,242 @@ main .dashboard .orders table td.tr {
 main .dashboard .orders table tr:nth-child(even) {
   background-color: #beb8b8;
 }
+
+.editPage {
+  width: calc(100vw - 220px);
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.editPage .productcontainer {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editPage .productcontainer header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+.editPage .productcontainer .edit-products {
+  margin-top: 2rem;
+  width: 80%;
+  height: 57%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0 2rem 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.editPage .productcontainer .edit-products .img {
+  background-color: red;
+  width: 80%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: .5rem;
+}
+
+.editPage .productcontainer .edit-products .img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.editPage .productcontainer .edit-products .productSummary {
+  width: 90%;
+  text-align: center;
+}
+
+.editPage .productcontainer .edit-products .productSummary h4 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.editPage .productcontainer .edit-products .productSummary h2 {
+  display: inline-block;
+}
+
+.editPage .productcontainer .edit-products .productSummary p {
+  display: inline-block;
+  font-size: .8rem;
+}
+
+.editPage .productcontainer .edit-products .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.editPage .productcontainer .edit-products .btn a {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #20b2aa;
+  color: #fff;
+  padding: .5rem 2.2rem;
+  margin-bottom: 0;
+}
+
+.editPage .productcontainer .edit-products .btn button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #20b2aa;
+  color: #fff;
+}
+
+.editPage .productcontainer .edit-products .btn button:nth-child(2) {
+  background-color: red;
+  padding: .5rem 1.5rem;
+}
+
+.editPage .productcontainer .edit-products .btn button:nth-child(1) {
+  padding: .5rem 2.2rem;
+}
+
+.editPage .editContainer {
+  width: 68%;
+  height: 100%;
+  padding: 4rem 0  4rem 5rem;
+}
+
+.editPage .editContainer .innerContainer {
+  height: 100%;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem 2rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editPage .editContainer .innerContainer label {
+  margin-bottom: .5rem;
+  font-size: .8rem;
+  color: #fff;
+}
+
+.editPage .editContainer .innerContainer input {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding: .5rem;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.editPage .editContainer .innerContainer select {
+  padding: .3rem .5rem;
+  width: 30%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editPage .editContainer .innerContainer select:focus, .editPage .editContainer .innerContainer select:hover {
+  outline: none;
+  border: 1px solid #20b2aa;
+}
+
+.editPage .editContainer .innerContainer select option {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 0px;
+}
+
+.editPage .editContainer .innerContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editPage .editContainer .innerContainer div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.editPage .editContainer .innerContainer input[type=file] {
+  background-color: #fff;
+}
+
+.editPage .editContainer .innerContainer .btn {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.editPage .editContainer .innerContainer .btn button, .editPage .editContainer .innerContainer .btn a {
+  margin-top: 0rem;
+  padding: .7rem;
+  outline: none;
+  border: none;
+  background-color: black;
+  font-weight: medium;
+  line-height: 1.2rem;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
