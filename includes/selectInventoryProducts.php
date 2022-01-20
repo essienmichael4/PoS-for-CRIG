@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="btn">
-                            <form>
+                            <form action="./pgname=edit.php">
                             <input type="text" class="productId" value="'.
                             $products["id"]
                             .'" hidden>

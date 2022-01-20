@@ -4,40 +4,25 @@
     $date = date('Y-m-d');
     $sql = "SELECT * FROM `orders` WHERE daybought = '$date';";
     $output = "";
+    $num = 0;
+    $orderid = "";
 
     $result = $conn->query($sql);
-    while($products = $result->fetch_assoc()){
-        $output .='<li class="existing-products">
-                    <div class="img">
-                    <img src="../assets/'.$products["productPic"].'" alt="">  
-                        </div>
-                        
-                        <div class="productSummary">
-                            <h4>'.
-                            $products["productName"]
-                            .'</h4>
-                            <p>Gh¢ '.
-                            $products["productPrice"]
-                            .'</p>
-                            <h2>.</h2>
-                            <p>'.
-                            $products["stock"]
-                            .' products</p>
-                        </div>
+    while($order = $result->fetch_assoc()){
 
-                        <div class="btn">
-                            <form>
-                            <input type="text" class="productId" value="'.
-                            $products["id"]
-                            .'" hidden>
-                            <input type="text" class="productImage" value="'.
-                            $products["productPic"]
-                            .'" hidden>
-                            <button>edit</button>
-                            </form>
-                            <button>delete</button>
-                        </div>
-                    </li>';
+        if($orderid != $order["orderid"]){
+            $num = $num+1;
+        }
+        
+        $output .='
+            <tr>
+                <td>'.$num.'</td>
+                <td>'.$order["productName"].'</td>
+                <td class="tr">'.$order["stock"].'</td>
+                <td class="tr">'.$order["productPrice"].'</td>
+                <td class="tr">'.$order["totalPrice"].'</td>
+            </tr>
+        ';
     }
 
     echo $output;
