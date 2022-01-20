@@ -1,0 +1,116 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  width: 100%;
+  background-color: #ebebeb;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tar {
+  text-align: right;
+}
+
+header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 5rem;
+  background-color: blue;
+  color: #ebebeb;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 500px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main form {
+  height: 300px;
+  width: 400px;
+  background-color: #ebebeb;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main form header {
+  padding-left: 4rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+main form .error {
+  height: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  text-align: center;
+  font-size: .8rem;
+  color: red;
+}
+
+main form .box {
+  width: 70%;
+  border: 1px solid blue;
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 3px;
+}
+
+main form .box input {
+  width: 100%;
+  line-height: 1.2rem;
+  padding: .3rem 1rem;
+  outline: none;
+  border: none;
+}
+
+main form button {
+  background-color: blue;
+  border: none;
+  padding: .5rem 2rem;
+  color: #ebebeb;
+  text-transform: uppercase;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 3.9rem;
+}
+/*# sourceMappingURL=style.css.map */
