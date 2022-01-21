@@ -14,10 +14,8 @@
                 $_SESSION["username"] = $row['username'];
                 $_SESSION["firstname"] = $row['firstname'];
                 $_SESSION["lastname"] = $row['surname'];
-                $_SESSION["email"] = $row['email'];
-                $_SESSION["number"] = $row['number'];
-                $_SESSION["location"] = $row['location'];
-                $_SESSION["uid"] = $row['uid'];
+                // $_SESSION["email"] = $row['email'];
+                $_SESSION["uid"] = $row['id'];
                 header("location: ../src/mainbody.php?pgname=productsbody");
             }else{
                 header("location: ../index.php?success=wrongpwd");

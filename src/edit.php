@@ -26,19 +26,20 @@
                 </div>
             </li>
         </div>
-        <form action="" class="editContainer" enctype="multipart/form-data">
+        <form action="../includes/editProducts.php" method="POST" class="editContainer" enctype="multipart/form-data">
             <div class="innerContainer">
-                <input type="text" name="user" value="<?= $_SESSION["user"] ?>" hidden>
+                <input type="text" name="user" value="<?= $_SESSION["username"] ?>" hidden>
                 <input type="text" name="pid" value="<?= $product["id"] ?>" hidden>
                 <input type="text" name="pname" value="<?= $product["productName"] ?>" hidden>
                 <input type="text" name="pPrice" value="<?= $product["productPrice"] ?>" hidden>
-                <input type="text" name="ppic" value="<?= $product["productpic"] ?>" hidden>
+                <input type="text" name="ppic" value="<?= $product["productPic"] ?>" hidden>
                 <input type="text" name="pStock" value="<?= $product["stock"] ?>" hidden>
                 <label for="">Product Name</label>
                     <input type="text" name="name" value="<?= $product["productName"] ?>">
 
                     <label for="">Action Performed on Stock</label>
-                    <select name="" id="">
+                    <select name="action">
+                        <option>None</option>
                         <option value="Add">add</option>
                         <option value="Sub">subtract</option>
                     </select>
@@ -57,7 +58,7 @@
                     
                     
                     <label for="">Product Image</label>
-                    <input type="file" name="productPic" value="<?= $product["productpic"]?>">
+                    <input type="file" name="productPic">
 
                     <div class="btn">
                         <a href="?pgname=inventorybody">Cancel</a>

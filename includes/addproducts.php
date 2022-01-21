@@ -23,7 +23,7 @@
             $ppicActExt = strtolower(end($ppicExt));
 
             $allowedExt = array('jpg', 'jpeg', 'png');
-            echo $ppicActExt;
+            
             if(in_array($ppicActExt, $allowedExt)){
                 if($ppicError === 0){
                     if($ppicSize < 5000000){

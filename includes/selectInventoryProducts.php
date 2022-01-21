@@ -1,7 +1,7 @@
 <?php
     include_once("./db.inc.php");
 
-    $sql = 'SELECT * FROM `products` WHERE stock > 0;';
+    $sql = 'SELECT * FROM `products`;';
     // $output = '<li class="add-new-product">
     // <i class="fas fa-plus"></i>
     // <h4>Add new product</h4>
