@@ -12,7 +12,6 @@ const totalSumPrice = ()=>{
         pricesum += product.price;
         
     })
-    // alert(typeof(pricesum));
     sumofCartItems = pricesum;
     return pricesum;
 }
@@ -21,12 +20,11 @@ function updateProducts(){
 
     if(cartProducts.length > 0){
         let result = cartProducts.map(product=>{
-            // alert(product.basePrice)
             return`
                 <li>
                 <i class="fas fa-times closes"></i>
                 <div class="cpimage">
-                <img src="${product.image}" alt="">
+                <img src="../assets/${product.image}" alt="">
                 </div>
 
                 <div class="cpdetails">
@@ -66,19 +64,14 @@ function updateProducts(){
 function updateCart(product){
     for(let i = 0; i < cartProducts.length; i++){
         if(cartProducts[i].id == product.id){
-            // cartProducts[i].count += 1;
-            // cartProducts[i].price = cartProducts[i].baseprice * cartProducts[i].count;
-
-            // alert(cartProducts[i].price)
-            // totalPrice.textContent = totalSumPrice()
+            cartProducts[i].count += 1;
+            cartProducts[i].price = cartProducts[i].basePrice * cartProducts[i].count;
+            totalPrice.textContent = totalSumPrice()
             return;
         }
     }
 
     cartProducts.push(product);
-
-    
-    // console.log(cartProducts);
 }
 
 productsList.forEach(product => {
@@ -88,8 +81,6 @@ productsList.forEach(product => {
         const productPrice = product.querySelector(".priceValue").textContent;
         const productStock = product.querySelector(".productStock").textContent;
         const productImage = product.querySelector(".productImage").value;
-
-        // alert(productPrice);
         
         let productsToCart = {
             id: productId,
@@ -101,12 +92,8 @@ productsList.forEach(product => {
             ,image: productImage
         }
 
-        // alert(productsToCart.basePrice)
-
         updateCart(productsToCart);
         updateProducts();
-
-        // alert(productStock)
     })
 })
 
@@ -115,28 +102,16 @@ cartBody.addEventListener("click",(e)=>{
     const sub = e.target.classList.contains("sub");
     const remove = e.target.classList.contains("remove");
     const closes = e.target.classList.contains("closes");
-    
-
-    // alert(e.target.classList);
-    // alert(sub);
 
     if(add || sub || closes){
         for(let i=0; i < cartProducts.length; i++){
             if(cartProducts[i].id == e.target.dataset.id){
                 if(add){
-                    // alert(add);
                     cartProducts[i].count += 1;
-
-                    // alert(cartProducts[i].count);
                 }else if(sub){
                     cartProducts[i].count -= 1;
-                    // if (cartProducts[i].count < 2){
-                    //     // sub.styl.display = "none";
-                    // }
-                    // alert(sub);
                 }
                 cartProducts[i].price = cartProducts[i].basePrice * cartProducts[i].count;
-                // alert(cartProducts[i].price)
             }
 
             if(cartProducts[i].count <= 0){
@@ -162,9 +137,14 @@ makeOrder.addEventListener("click", ()=>{
     xhr.onload = () =>{
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status == 200){
-                // console.log(this.responseText)
+                console.log(this.responseText)
             }
         }
     }
     xhr.send(params)
+
+    // let cart = document.querySelector(".cart");
+
+    cartProducts = [];
+    updateProducts();
 })

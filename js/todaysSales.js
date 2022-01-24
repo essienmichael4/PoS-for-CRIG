@@ -1,5 +1,5 @@
 let sales = document.querySelector(".sales");
-let orders = document.querySelector(".orders");
+
 
 
 setInterval(()=>{
@@ -16,6 +16,9 @@ setInterval(()=>{
     xhr.send()
 }, 500)
 
+
+let orders = document.querySelector(".orders");
+
 setInterval(()=>{
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "../includes/todaysOrders.php", true);
@@ -29,4 +32,3 @@ setInterval(()=>{
     }
     xhr.send()
 }, 500)
-    

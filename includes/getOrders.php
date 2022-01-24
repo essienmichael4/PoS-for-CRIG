@@ -2,7 +2,7 @@
     include_once("./db.inc.php");
 
     $date = date('Y-m-d');
-    $sql = "SELECT * FROM `orders` WHERE daybought = '$date';";
+    $sql = "SELECT * FROM `orders` WHERE `daybought` = '{$date}';";
     $output = "";
     $num = 0;
     $orderid = "";
@@ -19,10 +19,13 @@
                 <td>'.$num.'</td>
                 <td>'.$order["productName"].'</td>
                 <td class="tr">'.$order["stock"].'</td>
-                <td class="tr">'.$order["productPrice"].'</td>
-                <td class="tr">'.$order["totalPrice"].'</td>
+                <td class="tr">'.$order["basePrice"].'.00</td>
+                <td class="tr">'.$order["productPrice"].'.00</td>
+                <td class="tr">'.$order["totalPrice"].'.00</td>
             </tr>
         ';
+
+        $orderid = $order["orderid"];
     }
 
     echo $output;

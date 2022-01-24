@@ -1,6 +1,2 @@
-
-    
-
-    <script src="../js/utilities.js"></script>
 </body>
 </html>

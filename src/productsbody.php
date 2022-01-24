@@ -1,6 +1,6 @@
 <section class="mainArea">
             <header>
-            <i class="fas fa-bars menuicon"></i>
+            <!-- <i class="fas fa-bars menuicon"></i> -->
             </header>
             <div class="container">
                 <div class="header">
@@ -11,7 +11,7 @@
                     
                     <div class="totalItems">
                         <h4>Today's Orders</h4>
-                        <p>200</p>
+                        <p class="orders">200</p>
                     </div>
 
                     <div class="numberSales active">
@@ -20,126 +20,35 @@
                     
                 </div>
 
+                <?php
+                    include_once("../includes/db.inc.php");
+
+                    $sql = 'SELECT * FROM `products` WHERE stock > 0;';
+                    // $sql1 = 'SELECT * FROM products;';
+                    $result = $conn->query($sql);
+                ?>
+
                 <ul class="products">
-                    <li class="card product">
-                        <input type="text" class="productId" value="1" hidden>
-                        <input type="text" class="productImage" value="./1.png" hidden>
-                        <div class="productImg">
-                            <img src="" alt="">
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ <span class="priceValue">5.00</span> </p>
-                            <i><span class="productStock">20</span> products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                    <input type="text" class="productId" value="2" hidden>
-                    <input type="text" class="productImage" value="./2.png" hidden>
-                        <div class="productImg">
 
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ <span class="priceValue">6.00</span></p>
-                            <i><span class="productStock">30</span> products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                    <input type="text" class="productId" value="3" hidden>
-                    <input type="text" class="productImage" value="./3.png" hidden>
-                        <div class="productImg">
+                    <?php
+                        while($products = $result->fetch_assoc()){
+                    ?>
+                        <li class="card product">
+                            <input type="text" class="productId" value="<?=$products["id"]?>" hidden>
+                            <input type="text" class="productImage" value="<?=$products["productPic"]?>" hidden>
+                            <div class="productImg">
+                            <img src="../assets/<?=$products["productPic"]?>" alt="">  
+                            </div>
+                            <div class="productSummary">
+                                <h2 class="productName"><?=$products["productName"]?></h2>
+                                <p class="price">Gh¢ <span class="priceValue"><?=$products["productPrice"]?></span></p>
+                                <i><span class="productStock"><?=$products["stock"]?></span> products left</i>
+                            </div>
+                        </li>
+                    <?php
+                        }
+                    ?>
 
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ <span class="priceValue">20.00</span></p>
-                            <i><span class="productStock">50</span> products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                    <input type="text" class="productId" value="4" hidden>
-                    <input type="text" class="productImage" value="../assets/images.png" hidden>
-                        <div class="productImg">
-                            <img src="../assets/images.png" alt="">
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ <span class="priceValue">5.00</span></p>
-                            <i><span class="productStock">20</span> products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    <li class="card product">
-                        <div class="productImg">
-
-                        </div>
-                        <div class="productSummary">
-                            <h2 class="productName">Cocoa toffee</h2>
-                            <p class="price">Gh¢ 5.00</p>
-                            <i>20 products left</i>
-                        </div>
-                    </li>
-                    
                 </ul>
             </div>
 
@@ -150,39 +59,10 @@
                 <h2>Cart</h2>
             </div>
             <ul class="cartBody">
-                <li>
-                    <i class="fas fa-times closes"></i>
-                    <div class="cpimage">
-                        <img src="" alt="">
-                    </div>
-
-                    <div class="cpdetails">
-                        <h3>cocoa</h3>
-                        <p>Gh¢ 21.00</p>
-                    </div>
-
-                    <div class="cptotal">
-                        <div class="cpstock">
-                            <div class="remove">
-                                <i class="fas fa-trash-alt"></i>
-                            </div>
-                            <div class="subed"><i class="fas fa-minus sub"></i></div>
-
-                            <div class="nstock">12</div>
-
-                            <div class="added" id="add"><i class="fas fa-plus add"></i></div>
-                        </div>
-                        <div class="itemPrice">
-                            <h4>Gh¢ 1160.00</h4>
-                        </div>
-                        
-                    </div>
-                    
-                </li>
 
             </ul>
             <div class="cartFooter">
-                <input type="text" class="user" value="<?= $_SESSION["username"]?>">
+                <input type="text" class="user" value="<?= $_SESSION["username"]?>" hidden>
                 <h2 class="total">No products in cart.</h2>
                 <button class="makeOrder">order</button>
             </div>
@@ -190,5 +70,6 @@
         </aside>
         </main>
 
+        <script src="../js/todaysSales.js"></script>
         <script src="../js/productutilities.js"></script>
         <script src="../js/products.js"></script>
