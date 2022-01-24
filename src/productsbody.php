@@ -182,8 +182,9 @@
 
             </ul>
             <div class="cartFooter">
+                <input type="text" class="user" value="<?= $_SESSION["username"]?>">
                 <h2 class="total">No products in cart.</h2>
-                <button>order</button>
+                <button class="makeOrder">order</button>
             </div>
             
         </aside>

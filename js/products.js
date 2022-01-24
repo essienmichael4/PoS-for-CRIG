@@ -1,6 +1,8 @@
 let cartProducts = [];
 let totalPrice = document.querySelector(".total");
 let cartBody = document.querySelector(".cartBody");
+let makeOrder = document.querySelector(".makeOrder");
+let sumofCartItems = 0;
 
 const productsList = document.querySelectorAll(".product");
 
@@ -8,8 +10,10 @@ const totalSumPrice = ()=>{
     let pricesum = 0;
     cartProducts.forEach(product =>{
         pricesum += product.price;
+        
     })
     // alert(typeof(pricesum));
+    sumofCartItems = pricesum;
     return pricesum;
 }
 
@@ -143,7 +147,24 @@ cartBody.addEventListener("click",(e)=>{
             }
             updateProducts();
         }
-        // updateProducts();
     }
-    // alert(e.target.classList);
+})
+
+makeOrder.addEventListener("click", ()=>{
+    let user = document.querySelector(".user").value;
+    let productsincart = JSON.stringify(cartProducts);
+    let params = "user="+user+"&totalPrice="+sumofCartItems+"&cart="+productsincart;
+
+    console.log(params);
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../includes/buyProduct.php");
+    xhr.setRequestHeader("Content-type", 'application/x-www-form-urlencoded');
+    xhr.onload = () =>{
+        if(xhr.readyState == XMLHttpRequest.DONE){
+            if(xhr.status == 200){
+                // console.log(this.responseText)
+            }
+        }
+    }
+    xhr.send(params)
 })
