@@ -1,17 +1,23 @@
 <section class="mainArea">
             <header>
-            <!-- <i class="fas fa-bars menuicon"></i> -->
+                <h3>Products</h3>
+                <div class="userid"></div>
+                <div class="userdetails">
+                    <p><?=$_SESSION["username"]?></p>
+                    <a href="?pgname=edituser">edit user</a>
+                    <form action="../includes/logout.php"><button type="submit">logout</button></form>
+                </div>
             </header>
             <div class="container">
                 <div class="header">
                     <div class="totalSales">
                         <h4>Today's Sales</h4>
-                        <p class="sales">Gh¢ 3000.00</p>
+                        <p class="sales">Gh¢ 00.00</p>
                     </div>
                     
                     <div class="totalItems">
                         <h4>Today's Orders</h4>
-                        <p class="orders">200</p>
+                        <p class="orders">0</p>
                     </div>
 
                     <div class="numberSales active">
@@ -73,3 +79,4 @@
         <script src="../js/todaysSales.js"></script>
         <script src="../js/productutilities.js"></script>
         <script src="../js/products.js"></script>
+        <script src="../js/utilities.js"></script>

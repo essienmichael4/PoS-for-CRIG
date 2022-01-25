@@ -1,8 +1,14 @@
     <section class="inventory flex">
             <div class="inventory-items">
                 <header>
-                <i class="fas fa-bars menuicon"></i>
+                <!-- <i class="fas fa-bars menuicon"></i> -->
                     <h2>Inventory Management</h2>
+                    <div class="userid"></div>
+                    <div class="userdetails">
+                        <p><?=$_SESSION["username"]?></p>
+                        <a href="?pgname=edituser">edit user</a>
+                        <form action="../includes/logout.php"><button type="submit">logout</button></form>
+                    </div>
                 </header>
                 <ul class="productsList">
                     <li class="add-new-product">
@@ -62,4 +68,5 @@
 
         <script src="../js/getInventoryProducts.js"></script>
         <script src="../js/util.js"></script>
+        <script src="../js/utilities.js"></script>
         

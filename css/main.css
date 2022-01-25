@@ -117,6 +117,118 @@ section header {
   background-color: #fff;
   margin: 0 auto;
   margin-top: .3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 .5rem;
+}
+
+section header h3 {
+  font-size: 1.5rem;
+}
+
+section header .userid {
+  width: 50px;
+  height: 50px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+  border: 3px solid #beb8b8;
+  cursor: pointer;
+}
+
+section header .userdetails {
+  position: absolute;
+  right: 0.5rem;
+  top: 4rem;
+  background-color: rgba(32, 178, 170, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+section header .userdetails p {
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+section header .userdetails p:hover, section header .userdetails p:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+section header .userdetails a {
+  font-size: .8rem;
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+section header .userdetails a:hover, section header .userdetails a:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+section header .userdetails button {
+  padding: .3rem 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+section header .userdetails button:hover, section header .userdetails button:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
 }
 
 section .container {
@@ -538,7 +650,109 @@ main .inventory .inventory-items header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
   padding: 0 1rem;
+}
+
+main .inventory .inventory-items header .userid {
+  width: 50px;
+  height: 50px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+  border: 3px solid #beb8b8;
+  cursor: pointer;
+}
+
+main .inventory .inventory-items header .userdetails {
+  position: absolute;
+  right: 0.5rem;
+  top: 4rem;
+  background-color: rgba(32, 178, 170, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 1000;
+}
+
+main .inventory .inventory-items header .userdetails p {
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .inventory .inventory-items header .userdetails p:hover, main .inventory .inventory-items header .userdetails p:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .inventory .inventory-items header .userdetails a {
+  font-size: .8rem;
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+main .inventory .inventory-items header .userdetails a:hover, main .inventory .inventory-items header .userdetails a:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .inventory .inventory-items header .userdetails button {
+  padding: .3rem 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+main .inventory .inventory-items header .userdetails button:hover, main .inventory .inventory-items header .userdetails button:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
 }
 
 main .inventory .inventory-items ul {
@@ -808,10 +1022,112 @@ main .dashboard header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
   height: 4rem;
   width: 100%;
   padding: 0 1rem;
   margin-bottom: 1rem;
+}
+
+main .dashboard header .userid {
+  width: 50px;
+  height: 50px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+  border: 3px solid #beb8b8;
+  cursor: pointer;
+}
+
+main .dashboard header .userdetails {
+  position: absolute;
+  right: 0.5rem;
+  top: 4rem;
+  background-color: rgba(32, 178, 170, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 1000;
+}
+
+main .dashboard header .userdetails p {
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .dashboard header .userdetails p:hover, main .dashboard header .userdetails p:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .dashboard header .userdetails a {
+  font-size: .8rem;
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+main .dashboard header .userdetails a:hover, main .dashboard header .userdetails a:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .dashboard header .userdetails button {
+  padding: .3rem 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+main .dashboard header .userdetails button:hover, main .dashboard header .userdetails button:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
 }
 
 main .dashboard .filterbtns {
@@ -855,10 +1171,62 @@ main .dashboard .headerContainer div {
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  padding: .5rem .5rem;
+  position: relative;
 }
 
 main .dashboard .headerContainer div:nth-child(1) {
   background-color: #20b2aa;
+}
+
+main .dashboard .headerContainer div:nth-child(1) h4 {
+  font-size: 12px;
+  background-color: #fff;
+  width: 6rem;
+  text-align: center;
+  color: #20b2aa;
+  padding: .15rem 0;
+  border-radius: 2px;
+}
+
+main .dashboard .headerContainer div:nth-child(1) i {
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+main .dashboard .headerContainer div:nth-child(1) p {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: right;
+}
+
+main .dashboard .headerContainer div h4 {
+  font-size: 12px;
+  background-color: #20b2aa;
+  width: 6.5rem;
+  text-align: center;
+  color: #fff;
+  padding: .15rem 0;
+  border-radius: 2px;
+}
+
+main .dashboard .headerContainer div i {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  font-size: 3rem;
+  color: #20b2aa;
+}
+
+main .dashboard .headerContainer div p {
+  color: #beb8b8;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  text-align: right;
 }
 
 main .dashboard .orders {

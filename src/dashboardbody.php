@@ -1,10 +1,18 @@
 <section class="dashboard">
             <header>
             <!-- <i class="fas fa-bars menuicon"></i> -->
-                <h2>Dashboard</h2>
+                <h3>Dashboard</h3>
+
+                <div class="userid"></div>
+                <div class="userdetails">
+                    <p><?=$_SESSION["username"]?></p>
+                    <a href="?pgname=edituser">edit user</a>
+                    <form action="../includes/logout.php"><button type="submit">logout</button></form>
+                </div>
             </header>
 
             <div class="filterbtns">
+                <button class="day">Today</button>
                 <button class="week">This Week</button>
                 <button class="month">This Month</button>
                 <button class="year">This Year</button>
@@ -14,10 +22,26 @@
             
 
             <div class="headerContainer">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <h4>Today's Sales</h4>
+                    <i class="fas fa-dollar-sign"></i>  
+                    <p class="sales">Gh¢ 300,000.00</p>
+                </div>
+                <div>
+                    <h4>Today's Orders</h4>
+                    <i class="fas fa-sort-amount-up-alt"></i>
+                    <p class="order">0</p>
+                </div>
+                <div>
+                    <h4>Items Bought</h4>
+                    <i class="fas fa-cart-plus"></i>
+                    <p class="order">0</p>
+                </div>
+                <div>
+                    <h4>Items Left</h4>
+                    <i class="fas fa-cart-plus"></i>
+                    <p class="order">0</p>
+                </div>
             </div>
 
             
@@ -45,3 +69,4 @@
         </main>
 
         <script src="../js/getTodaysOrders.js"></script>
+        <script src="../js/utilities.js"></script>
