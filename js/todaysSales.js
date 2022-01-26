@@ -17,7 +17,7 @@ setInterval(()=>{
 }, 500)
 
 
-let orders = document.querySelector(".orders");
+let order = document.querySelector(".order");
 
 setInterval(()=>{
     let xhr = new XMLHttpRequest();
@@ -26,7 +26,7 @@ setInterval(()=>{
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status == 200){
                 let data = xhr.response;
-                orders.innerHTML = data;
+                order.innerHTML = data;
             }
         }
     }

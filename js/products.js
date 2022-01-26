@@ -65,6 +65,9 @@ function updateCart(product){
     for(let i = 0; i < cartProducts.length; i++){
         if(cartProducts[i].id == product.id){
             cartProducts[i].count += 1;
+            if(cartProducts[i].count > cartProducts[i].stock){
+                cartProducts[i].count = cartProducts[i].stock;
+            }
             cartProducts[i].price = cartProducts[i].basePrice * cartProducts[i].count;
             totalPrice.textContent = totalSumPrice()
             return;
@@ -108,6 +111,9 @@ cartBody.addEventListener("click",(e)=>{
             if(cartProducts[i].id == e.target.dataset.id){
                 if(add){
                     cartProducts[i].count += 1;
+                    if(cartProducts[i].count > cartProducts[i].stock){
+                        cartProducts[i].count = cartProducts[i].stock;
+                    }
                 }else if(sub){
                     cartProducts[i].count -= 1;
                 }

@@ -17,7 +17,7 @@
                     
                     <div class="totalItems">
                         <h4>Today's Orders</h4>
-                        <p class="orders">0</p>
+                        <p class="order">0</p>
                     </div>
 
                     <div class="numberSales active">
@@ -41,6 +41,7 @@
                     ?>
                         <li class="card product">
                             <input type="text" class="productId" value="<?=$products["id"]?>" hidden>
+                            <input type="text" class="productInputStock" value="<?=$products["stock"]?>" hidden>
                             <input type="text" class="productImage" value="<?=$products["productPic"]?>" hidden>
                             <div class="productImg">
                             <img src="../assets/<?=$products["productPic"]?>" alt="">  

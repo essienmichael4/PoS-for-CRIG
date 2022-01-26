@@ -2,11 +2,11 @@
     include_once("./db.inc.php");
 
     $date = date('Y-m');
-    $sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE daybought >= '$date';";
+    $sql = "SELECT SUM(`stock`) as items FROM `orders` WHERE daybought >= '$date';";
 
 
     $result = $conn->query($sql);
 
     $row = mysqli_fetch_assoc($result);
 
-    echo "Gh¢ {$row['sales']}.00";
+    echo "{$row['items']}";

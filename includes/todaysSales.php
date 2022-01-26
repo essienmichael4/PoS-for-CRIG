@@ -3,8 +3,7 @@
 include_once("./db.inc.php");
 
 $date = date('Y-m-d');
-$sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE daybought = '$date';";
-
+$sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE daybought >= '$date';";
 
 $result = $conn->query($sql);
 

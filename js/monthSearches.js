@@ -1,10 +1,11 @@
-let week = document.querySelector(".week");
+let month = document.querySelector(".month");
 
-week.addEventListener("click", ()=>{
+month.addEventListener("click", ()=>{
     let ordersList = document.querySelector(".ordersList");
-    let order = document.querySelector(".ordersList");
-    let sale = document.querySelector(".ordersList");
-    setInterval(()=>{
+    let order = document.querySelector(".order");
+    let sale = document.querySelector(".sales");
+    let item = document.querySelector(".item");
+    
         let xhr = new XMLHttpRequest();
         xhr.open("GET", "../includes/monthTableSearch.php",true)
         xhr.onload = ()=>{
@@ -16,33 +17,46 @@ week.addEventListener("click", ()=>{
             }
         }
         xhr.send()
-    },500)
 
-    setInterval(()=>{
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", "../includes/monthSalesSearch.php",true)
-        xhr.onload = ()=>{
-            if(xhr.readyState == XMLHttpRequest.DONE){
-                if(xhr.status == 200){
-                    let data = xhr.response;
+
+        let salexhr = new XMLHttpRequest();
+        salexhr.open("GET", "../includes/monthSalesSearch.php",true)
+        salexhr.onload = ()=>{
+            if(salexhr.readyState == XMLHttpRequest.DONE){
+                if(salexhr.status == 200){
+                    let data = salexhr.response;
                     sale.innerHTML = data;
                 }
             }
         }
-        xhr.send()
-    },500)
+        salexhr.send()
 
-    setInterval(()=>{
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", "../includes/monthOrdersSearch.php",true)
-        xhr.onload = ()=>{
-            if(xhr.readyState == XMLHttpRequest.DONE){
-                if(xhr.status == 200){
-                    let data = xhr.response;
+    
+        let orderxhr = new XMLHttpRequest();
+        orderxhr.open("GET", "../includes/monthOrdersSearch.php",true)
+        orderxhr.onload = ()=>{
+            if(orderxhr.readyState == XMLHttpRequest.DONE){
+                if(orderxhr.status == 200){
+                    let data = orderxhr.response;
                     order.innerHTML = data;
                 }
             }
         }
-        xhr.send()
-    },500)
+        orderxhr.send()
+    
+
+    
+        let itemxhr = new XMLHttpRequest();
+        itemxhr.open("GET", "../includes/monthItemsSearch.php",true)
+        itemxhr.onload = ()=>{
+            if(itemxhr.readyState == XMLHttpRequest.DONE){
+                if(itemxhr.status == 200){
+                    let data = itemxhr.response;
+                    item.innerHTML = data;
+                }
+            }
+        }
+        itemxhr.send()
+    
+
 })

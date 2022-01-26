@@ -3,7 +3,7 @@
 
     $num = 0;
     $date = date('Y');
-    $sql = "SELECT `orderid` FROM `orders` WHERE `daybought` = (Select date(curdate() - interval weekday(curdate()) day))";
+    $sql = "SELECT `orderid` FROM `orders` WHERE `daybought` >= (Select date(curdate() - interval weekday(curdate()) day))";
     $id = "";
 
     $result = $conn->query($sql);
