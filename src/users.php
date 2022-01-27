@@ -5,7 +5,7 @@
         <div class="userid"></div>
         <div class="userdetails">
             <p><?=$_SESSION["username"]?></p>
-            <a href="?pgname=edituser&userid=<?=$_SESSION["userid"]?>">edit user</a>
+            <a href="?pgname=edituser&userid=<?=$_SESSION["uid"]?>">edit user</a>
             <form action="../includes/logout.php"><button type="submit">logout</button></form>
         </div>
     </header>
@@ -13,6 +13,23 @@
     <div class="filterbtns">
         <button class="addUserBtn"><i class="fas fa-plus"></i> Add new user</button>
     </div>
+
+    <?php
+        include_once("../includes/db.inc.php");
+        $sql = "";
+
+        if($_SESSION["usertype"] =="user"){
+            $sql = "SELECT * FROM `admin` WHERE `usertype` = '{$_SESSION["usertype"]}';";
+        }else if($_SESSION["usertype"] =="admin"){
+            $sql = "SELECT * FROM `admin` WHERE `usertype` = 'user' AND `usertype` = '{$_SESSION["usertype"]}';";
+        }else{
+            $sql = "SELECT * FROM `admin`";
+        }
+
+        $result = mysqli_query($conn, $sql);
+
+    ?>
+        
 
     <div class="content">
         <table>
@@ -22,39 +39,54 @@
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Email</th>
+                    <?php
+                        if($_SESSION["usertype"] =="superadmin"){
+                    ?>
                     <th>Password</th>
+                    <?php
+                        }
+                    ?>
                     <th>User type</th>
+                    <?php
+                        if($_SESSION["usertype"] == "superadmin" || $_SESSION["usertype"] == "admin"){
+                    ?>
                     <th>Actions</th>
+                    <?php
+                        }
+                    ?>
                 </tr>
             </thead>
             <tbody class="ordersList">
+                <?php
+                    while($row = mysqli_fetch_assoc($result)){
+
+                
+                ?>
                 <tr>
-                    <td>codejunior</td>
-                    <td class="tr">Michael</td>
-                    <td>Essien</td>
-                    <td class="tr">essienmichael4@gmail.com</td>
-                    <td>test1234</td>
-                    <td class="tr">superadmin</td>
-                    <td><a href="">Edit</a><a href="">Delete</a></td>
+                    <td><?=$row["username"]?></td>
+                    <td class="tr"><?=$row["firstname"]?></td>
+                    <td><?=$row["lastname"]?></td>
+                    <td class="tr"><?=$row["email"]?></td>
+                    <?php
+                        if($_SESSION["usertype"] =="superadmin"){
+                    ?>
+                    <td><?=$row["password"]?></td>
+                    <?php
+                        }
+                    ?>
+                    <td class="tr"><?=$row["usertype"]?></td>
+                    <?php
+                        if($_SESSION["usertype"] == "superadmin" || $_SESSION["usertype"] == "admin"){
+                    ?>
+                    <td><a href="?pgname=edituser&userid=<?=$row["id"]?>">Edit</a><a href="?pgname=deleteuser&userid=<?=$row["id"]?>">Delete</a></td>
+                    <?php
+                        }
+                    ?>
                 </tr>
-                <tr>
-                    <td>codejunior</td>
-                    <td class="tr">Michael</td>
-                    <td>Essien</td>
-                    <td class="tr">essienmichael4@gmail.com</td>
-                    <td>test1234</td>
-                    <td class="tr">superadmin</td>
-                    <td><a href="">Edit</a><a href="">Delete</a></td>
-                </tr>
-                <tr>
-                    <td>codejunior</td>
-                    <td class="tr">Michael</td>
-                    <td>Essien</td>
-                    <td class="tr">essienmichael4@gmail.com</td>
-                    <td>test1234jjjjjjjjjjjjjjjjjjjjgggggggghhhhhhd</td>
-                    <td class="tr">superadmin</td>
-                    <td><a href="">Edit</a><a href="">Delete</a></td>
-                </tr>
+
+                <?php
+                    }
+                ?>
                         
             </tbody>
         </table>
@@ -88,8 +120,14 @@
                 <label for="">User type</label>
                 <select name="usertype" id="usertype">
                     <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                    <option value="super">Superadmin</option>
+                    <?php
+                        if($_SESSION["usertype"]=="admin" || $_SESSION["usertype"]=="superadmin"){
+                            echo '<option value="admin">Admin</option>';
+                        }
+                        if($_SESSION["usertype"]=="superadmin"){
+                            echo '<option value="super">Superadmin</option>';
+                        }
+                    ?>
                 </select>
 
                 <div class="box">

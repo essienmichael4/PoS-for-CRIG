@@ -3,6 +3,23 @@ let addUser = document.querySelector(".addUser");
 let cancel = document.querySelector(".cancel");
 let remove = document.querySelector(".remove");
 let addusersumbit = document.querySelector(".addusersumbit");
+let err = document.querySelector(".err");
+
+let userid = document.querySelector(".userid");
+let userdetails = document.querySelector(".userdetails");
+
+
+
+userid.addEventListener("click", ()=>{
+    userid.classList.toggle("active");
+
+    if(userid.classList.contains("active")){
+        userdetails.style.display = "flex";
+    }else{
+        userdetails.style.display = "none";
+    }
+    
+})
 
 userBtn.addEventListener("click", ()=>{
     userBtn.classList.toggle("active");
@@ -16,6 +33,9 @@ userBtn.addEventListener("click", ()=>{
 
 cancel.addEventListener("click", ()=>{
     userBtn.classList.toggle("active");
+    if(err.style.visibility == "visible"){
+        err.style.visibility == "hidden";
+    }
 
     if(userBtn.classList.contains('active')){
         addUser.style.display = "flex";
@@ -26,6 +46,9 @@ cancel.addEventListener("click", ()=>{
 
 remove.addEventListener("click", ()=>{
     userBtn.classList.toggle("active");
+    if(err.style.visibility == "visible"){
+        err.style.visibility == "hidden";
+    }
 
     if(userBtn.classList.contains('active')){
         addUser.style.display = "flex";
@@ -35,14 +58,22 @@ remove.addEventListener("click", ()=>{
 })
 
 addusersumbit.addEventListener("click", ()=>{
-    let err = document.querySelector(".err");
-    let firstname = document.querySelector(".firstname").value;
-    let lastname = document.querySelector(".lastname").value;
-    let email = document.querySelector(".email").value;
-    let username = document.querySelector(".username").value;
-    let usertype = document.querySelector("#usertype").value;
-    let password = document.querySelector(".password").value;
-    let passwordRep = document.querySelector(".passwordRep").value;
+    
+    let firstnameInput = document.querySelector(".firstname");
+    let lastnameInput = document.querySelector(".lastname");
+    let emailInput = document.querySelector(".email");
+    let usernameInput = document.querySelector(".username");
+    let usertypeInput = document.querySelector("#usertype");
+    let passwordInput = document.querySelector(".password");
+    let passwordRepInput = document.querySelector(".passwordRep");
+
+    let firstname = firstnameInput.value;
+    let lastname = lastnameInput.value;
+    let email = emailInput.value;
+    let username = usernameInput.value;
+    let usertype = usertypeInput.value;
+    let password = passwordInput.value;
+    let passwordRep = passwordRepInput.value;
 
     if(firstname == "" ||lastname == ""||email == ""||username == ""||
     password == ""||passwordRep == ""){
@@ -65,6 +96,22 @@ addusersumbit.addEventListener("click", ()=>{
     xhr.onload = () =>{
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status == 200){
+                if(xhr.response == "Successful"){
+                    firstnameInput.value = "";
+                    lastnameInput.value = "";
+                    emailInput.value = "";
+                    usernameInput.value = "";
+                    usertypeInput.value = "";
+                    passwordInput.value = "";
+                    passwordRepInput.value = "";
+
+                    err.classList.toggle("active");
+                    err.textContent =  "User Added Successfully";
+                    err.style.visibility = "visible";
+                }else{
+                    err.textContent =  xhr.response;
+                    err.style.visibility = "visible";
+                }
                 
             }
         }

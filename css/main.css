@@ -1878,6 +1878,11 @@ main .usersPage .addUser .userContainer .body p {
   border-radius: 3px;
 }
 
+main .usersPage .addUser .userContainer .body p.active {
+  color: green;
+  background-color: rgba(139, 252, 154, 0.3);
+}
+
 main .usersPage .addUser .userContainer .footer {
   height: 12%;
   padding: 0 2rem;

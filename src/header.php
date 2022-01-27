@@ -35,11 +35,15 @@
                         }else{
                             echo '<li><a href="?pgname=dashboardbody" class="linkItem"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>';
                         }
-                        if($_GET['pgname']=="inventorybody" || $_GET['pgname']=="edit"){
-                            echo '<li><a href="?pgname=inventorybody" class="linkItem active"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
-                        }else{
-                            echo '<li><a href="?pgname=inventorybody" class="linkItem"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
+
+                        if($_SESSION["usertype"]=="admin" || $_SESSION["usertype"]=="superadmin"){
+                            if($_GET['pgname']=="inventorybody" || $_GET['pgname']=="edit"){
+                                echo '<li><a href="?pgname=inventorybody" class="linkItem active"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
+                            }else{
+                                echo '<li><a href="?pgname=inventorybody" class="linkItem"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
+                            }
                         }
+                        
                         if($_GET['pgname']=="users" || $_GET['pgname']=="edituser"){
                             echo '<li><a href="?pgname=users" class="linkItem active"><i class="fas fa-tasks"></i><span>Users</span></a></li>';
                         }else{

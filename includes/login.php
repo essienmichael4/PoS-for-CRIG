@@ -17,20 +17,6 @@
     }
 
 
-    
-
-   
-    // echo $username;
-    // echo $pwd;
-
-    // $sql = 'SELECT * FROM admin WHERE username = "$username" AND password = "$password"';
-
-    // $result = $conn->query($sql);
-
-    // $user = $result->fetch_assoc();
-
-
-
 
 
     
