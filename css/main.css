@@ -1512,4 +1512,398 @@ main .dashboard .orders table tr:nth-child(even) {
   border-radius: 2px;
   cursor: pointer;
 }
+
+main .usersPage {
+  width: calc(100vw - 220px);
+  min-height: 100%;
+  padding: 0 .5rem;
+}
+
+main .usersPage header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+main .usersPage header .userid {
+  width: 50px;
+  height: 50px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+  border: 3px solid #beb8b8;
+  cursor: pointer;
+}
+
+main .usersPage header .userdetails {
+  position: absolute;
+  right: 0.5rem;
+  top: 4rem;
+  background-color: rgba(32, 178, 170, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 1000;
+}
+
+main .usersPage header .userdetails p {
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .usersPage header .userdetails p:hover, main .usersPage header .userdetails p:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .usersPage header .userdetails a {
+  font-size: .8rem;
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+main .usersPage header .userdetails a:hover, main .usersPage header .userdetails a:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .usersPage header .userdetails button {
+  padding: .3rem 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+main .usersPage header .userdetails button:hover, main .usersPage header .userdetails button:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+main .usersPage .filterbtns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 1rem 0;
+}
+
+main .usersPage .filterbtns button {
+  padding: .5rem 1rem;
+  color: #ebebeb;
+  cursor: pointer;
+  background-color: blue;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+
+main .usersPage .filterbtns button i {
+  margin-right: 1rem;
+}
+
+main .usersPage .content {
+  width: 100%;
+  height: calc(100% - 8.5rem);
+  background-color: #fff;
+  padding: 1rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+main .usersPage .content::-webkit-scrollbar {
+  display: none;
+}
+
+main .usersPage .content table {
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  border-collapse: collapse;
+  position: relative;
+}
+
+main .usersPage .content table thead {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  color: #20b2aa;
+}
+
+main .usersPage .content table th {
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+main .usersPage .content table td {
+  padding: .8rem 1rem;
+  width: 6rem;
+  font-size: .8rem;
+  text-overflow: ellipsis;
+}
+
+main .usersPage .content table td.tr {
+  background-color: rgba(235, 235, 235, 0.5);
+}
+
+main .usersPage .content table td a {
+  padding: .2rem .5rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 2px;
+}
+
+main .usersPage .content table td a:first-child {
+  background-color: #20b2aa;
+  margin-right: .2rem;
+  padding: .2rem 1rem;
+}
+
+main .usersPage .content table tr:nth-child(even) {
+  background-color: #beb8b8;
+}
+
+main .usersPage .addUser {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .usersPage .addUser .userContainer {
+  height: 80%;
+  width: 50%;
+  background-color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .usersPage .addUser .userContainer .header {
+  margin-top: 0;
+  width: 100%;
+  background-color: #20b2aa;
+  color: #ebebeb;
+  height: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+}
+
+main .usersPage .addUser .userContainer .header h2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+main .usersPage .addUser .userContainer .header i {
+  cursor: pointer;
+}
+
+main .usersPage .addUser .userContainer .body {
+  height: 70%;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .usersPage .addUser .userContainer .body h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #20b2aa;
+}
+
+main .usersPage .addUser .userContainer .body .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: .3rem;
+}
+
+main .usersPage .addUser .userContainer .body .box .boxContainer {
+  width: 45%;
+}
+
+main .usersPage .addUser .userContainer .body .box .boxContainer label {
+  font-size: .8rem;
+  margin-bottom: .4rem;
+}
+
+main .usersPage .addUser .userContainer .body .box .boxContainer input {
+  width: 100%;
+}
+
+main .usersPage .addUser .userContainer .body label {
+  font-size: .8rem;
+  margin-bottom: .3rem;
+  font-weight: bold;
+}
+
+main .usersPage .addUser .userContainer .body input {
+  padding: .5rem .5rem;
+  margin-bottom: .3rem;
+  outline: none;
+  border: 1px solid #beb8b8;
+  border-radius: 3px;
+}
+
+main .usersPage .addUser .userContainer .body input:focus, main .usersPage .addUser .userContainer .body input:hover {
+  border: 1px solid #20b2aa;
+}
+
+main .usersPage .addUser .userContainer .body select {
+  padding: .3rem .5rem;
+  width: 40%;
+  margin-bottom: .3rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+main .usersPage .addUser .userContainer .body select:focus, main .usersPage .addUser .userContainer .body select:hover {
+  outline: none;
+  border: 1px solid #20b2aa;
+}
+
+main .usersPage .addUser .userContainer .body select option {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 0px;
+}
+
+main .usersPage .addUser .userContainer .body p {
+  color: red;
+  text-align: center;
+  visibility: hidden;
+  background-color: rgba(252, 139, 139, 0.3);
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: .2rem 0;
+  border-radius: 3px;
+}
+
+main .usersPage .addUser .userContainer .footer {
+  height: 12%;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .usersPage .addUser .userContainer .footer button {
+  padding: .5rem 1rem;
+  color: #ebebeb;
+  cursor: pointer;
+  background-color: blue;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+main .usersPage .addUser .userContainer .footer button:first-child {
+  background-color: #beb8b8;
+  color: #fff;
+}
 /*# sourceMappingURL=main.css.map */

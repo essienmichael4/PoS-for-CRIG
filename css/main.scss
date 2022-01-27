@@ -1307,3 +1307,329 @@ main .dashboard{
         }
     }
 }
+
+main .usersPage{
+    width: calc(100vw - 220px);
+    min-height: 100%;
+    padding: 0 .5rem;
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 4rem;
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+
+        .userid{
+            width: 50px;
+            height: 50px;
+            background-color: $secondarylight;
+            border-radius: 50%;
+            border: 3px solid $secondarydark;
+            cursor: pointer;
+        }
+
+        .userdetails{
+            position: absolute;
+            right: 0.5rem;
+            top: 4rem;
+            background-color: rgba($color: #20b2aa, $alpha: .8);
+            border-radius: 5px;
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 9rem;
+            transition: .5s ease;
+            z-index: 1000;
+
+            p{
+                padding: .3rem 0;
+                width: 100%;
+                color: $accentcolor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid $primarylight;
+
+                &:hover,&:focus{
+                    background-color: #ebebeb;
+                    color: $secondarylight;
+                }
+            }
+
+            a{
+                font-size: .8rem;
+                padding: .3rem 0;
+                width: 100%;
+                color: $accentcolor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+
+                &:hover,&:focus{
+                    background-color: #ebebeb;
+                    color: $secondarylight;
+                }
+            }
+
+            button{
+                padding: .3rem 3rem;
+                color: $accentcolor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: $accentcolor;
+                font-size: .8rem;
+                text-transform: uppercase;
+
+                &:hover,&:focus{
+                    background-color: #ebebeb;
+                    color: $secondarylight;
+                }
+            }
+        }
+
+    }
+
+    .filterbtns{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 1rem 0;
+
+        button{
+            padding: .5rem 1rem;
+            color: $primarylight;
+            cursor: pointer;
+            background-color: blue;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin-right: 2rem;
+
+            i{
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .content{
+        width: 100%;
+        height: calc(100% - 8.5rem);
+        background-color: $accentcolor;
+        padding: 1rem;
+        overflow-y: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        table{
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+            border-collapse: collapse;
+            position: relative;
+
+            thead{
+                box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .3);
+                color: $secondarylight;
+            }
+
+            th{
+                padding: 1rem 1rem;
+                text-transform: uppercase;
+                font-size: .8rem;
+            }
+
+            td{
+                padding: .8rem 1rem;
+                width: 6rem;
+                font-size: .8rem;
+                text-overflow: ellipsis;
+                // display: flex;
+
+                &.tr{
+                    // text-align: center;
+                    background-color: rgba($color: #ebebeb, $alpha: .5);
+                }
+
+                a{
+                    // display: inline-block;
+                    padding: .2rem .5rem;
+                    background-color: red;
+                    color: $accentcolor;
+                    border-radius: 2px;
+                    
+                    &:first-child{
+                        background-color: $secondarylight;
+                        margin-right: .2rem;
+                        padding: .2rem 1rem;
+                    }
+                }
+            }
+
+            tr:nth-child(even){
+                background-color: $secondarydark;
+            }
+        }
+    }
+
+    .addUser{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: .5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .userContainer{
+            height: 80%;
+            width: 50%;
+            background-color: $accentcolor;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .header{
+                margin-top: 0;
+                width: 100%;
+                background-color: $secondarylight;
+                color: $primarylight;
+                height: 12%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 2rem;
+
+                h2{
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+
+                i{
+                    cursor: pointer;
+                }
+            }
+
+            .body{
+                height: 70%;
+                padding: 0 2rem;
+                display: flex;
+                flex-direction: column;
+
+                h4{
+                    width: fit-content;
+                    margin-bottom: 1rem;
+                    border-bottom: 3px solid $secondarylight;
+                }
+
+                .box{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-bottom: .3rem;
+
+                    .boxContainer{
+                        width: 45%;
+                        
+                        label{
+                            font-size: .8rem;
+                            margin-bottom: .4rem;
+                        }
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                label{
+                    font-size: .8rem;
+                    margin-bottom: .3rem;
+                    font-weight: bold;
+                }
+
+                input{
+                    padding: .5rem .5rem;
+                    margin-bottom: .3rem;
+                    outline: none;
+                    border: 1px solid $secondarydark;
+                    border-radius: 3px;
+
+                    &:focus, &:hover{
+                        border: 1px solid $secondarylight;
+                    }
+                }
+
+                select{
+                    padding: .3rem .5rem;
+                    width: 40%;
+                    margin-bottom: .3rem;
+                    cursor: pointer;
+                    border-radius: 4px;
+    
+                    &:focus,&:hover{
+                        outline: none;
+                        border: 1px solid $secondarylight;
+                    }
+    
+                    option{
+                        cursor: pointer;
+                        padding: .5rem 1rem;
+                        border-radius: 0px;
+                    }
+                }
+
+                p{
+                    color: red;
+                    text-align: center;
+                    visibility: hidden;
+                    background-color: rgba($color: #fc8b8b, $alpha: .3);
+                    width: 80%;
+                    align-self: center;
+                    padding: .2rem 0;
+                    border-radius: 3px;
+                }
+            }
+
+            .footer{
+                height: 12%;
+                padding: 0 2rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+
+                
+                button{
+                    padding: .5rem 1rem;
+                    color: $primarylight;
+                    cursor: pointer;
+                    background-color: blue;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+
+                    &:first-child{
+                        background-color: $secondarydark;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

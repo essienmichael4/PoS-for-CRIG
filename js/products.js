@@ -136,20 +136,20 @@ makeOrder.addEventListener("click", ()=>{
     let productsincart = JSON.stringify(cartProducts);
     let params = "user="+user+"&totalPrice="+sumofCartItems+"&cart="+productsincart;
 
-    console.log(params);
+    // console.log(params);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "../includes/buyProduct.php");
     xhr.setRequestHeader("Content-type", 'application/x-www-form-urlencoded');
     xhr.onload = () =>{
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status == 200){
-                console.log(this.responseText)
+                // alert(responseText)
             }
         }
     }
     xhr.send(params)
 
-    // let cart = document.querySelector(".cart");
+    alert("Order made successfully")
 
     cartProducts = [];
     updateProducts();

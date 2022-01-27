@@ -40,6 +40,11 @@
                         }else{
                             echo '<li><a href="?pgname=inventorybody" class="linkItem"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
                         }
+                        if($_GET['pgname']=="users" || $_GET['pgname']=="edituser"){
+                            echo '<li><a href="?pgname=users" class="linkItem active"><i class="fas fa-tasks"></i><span>Users</span></a></li>';
+                        }else{
+                            echo '<li><a href="?pgname=users" class="linkItem"><i class="fas fa-tasks"></i><span>Users</span></a></li>';
+                        }
                     ?>
                 </ul>
             </nav>
