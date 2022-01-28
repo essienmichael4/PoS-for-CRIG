@@ -78,7 +78,7 @@
                     <?php
                         if($_SESSION["usertype"] == "superadmin" || $_SESSION["usertype"] == "admin"){
                     ?>
-                    <td><a href="?pgname=edituser&userid=<?=$row["id"]?>">Edit</a><a href="?pgname=deleteuser&userid=<?=$row["id"]?>">Delete</a></td>
+                    <td><a href="?pgname=edituser&userid=<?=$row["id"]?>">Edit</a></td>
                     <?php
                         }
                     ?>

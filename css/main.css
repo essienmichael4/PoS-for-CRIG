@@ -2291,4 +2291,130 @@ main .usersPage .addUser .userContainer .footer button:first-child {
   padding: .8rem 1rem;
   background-color: red;
 }
+
+.editUser .deleteUser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.editUser .deleteUser .delContainer {
+  padding: 2rem;
+  width: 40%;
+  background-color: #fff;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editUser .deleteUser .delContainer h3 {
+  text-align: center;
+}
+
+.editUser .deleteUser .delContainer label {
+  margin-top: 1rem;
+  font-size: .8rem;
+  margin-bottom: .4rem;
+  font-weight: bold;
+  padding-top: .2rem;
+}
+
+.editUser .deleteUser .delContainer input {
+  padding: .5rem .5rem;
+  margin-bottom: .3rem;
+  outline: none;
+  border: 1px solid #beb8b8;
+  border-radius: 3px;
+}
+
+.editUser .deleteUser .delContainer input:focus, .editUser .deleteUser .delContainer input:hover {
+  border: 1px solid #20b2aa;
+}
+
+.editUser .deleteUser .delContainer .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.editUser .deleteUser .delContainer .box a {
+  margin-top: 3rem;
+  padding: .5rem 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: #beb8b8;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.editUser .deleteUser .delContainer .box a:hover, .editUser .deleteUser .delContainer .box a:focus {
+  background-color: #6492e7;
+}
+
+.editUser .deleteUser .delContainer .box button {
+  margin-top: 3rem;
+  padding: .5rem 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: #beb8b8;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.editUser .deleteUser .delContainer .box button:hover, .editUser .deleteUser .delContainer .box button:focus {
+  background-color: #6492e7;
+}
+
+.editUser .deleteUser .delContainer .box button.deletebtn {
+  padding: .8rem 1rem;
+  background-color: red;
+}
 /*# sourceMappingURL=main.css.map */

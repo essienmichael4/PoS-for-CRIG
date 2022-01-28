@@ -62,7 +62,7 @@
                 <p class="err">Error input</p>
 
                 <div class="box1">
-                    <a href="?user">Leave</a>
+                    <a href="?pgname=users">Leave</a>
                     <button class="changeUserInfo">Save Changes</button>
                 </div>
                 
@@ -94,13 +94,30 @@
                     }
                 ?>
 
-                <!-- <button class="changePassword">Change Password</button> -->
                 <button class="deleteAccount">Delete User Account</button>
             </div>
                 
         </div>
     </div>
+
+    <div class="deleteUser">
+        <form class="delContainer" action="../includes/deleteUserAccount.php" method="POST">
+            
+            <input type="text" name="sid" class="sid" value="<?=$_SESSION["uid"]?>" hidden>
+            <input type="text" name="uid" class="uid" value="<?=$user["id"]?>" hidden>
+
+            <h3>Do you want to continue with this operation? This operation can't be reversed.</h3>
+            <label for="">Enter Password to Confirm</label>
+                <input type="text" name="password" class="oldPassword">
+            <div class="box">
+                <a class="cancelbtn">Cancel</a>
+                <button type="submit" class="deletebtn">Delete This User Account</button>
+            </div>
+            
+        </form>
+    </div>
 </section>
 </main>
 
 <script src="../js/editUser.js"></script>
+<script src="../js/editutilities.js"></script>

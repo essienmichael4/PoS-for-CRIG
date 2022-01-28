@@ -1961,4 +1961,107 @@ main .usersPage{
             }
         }
     }
+
+    .deleteUser{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: .5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .delContainer{
+            padding: 2rem;
+            width: 40%;
+            background-color: $accentcolor;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h3{
+                text-align: center;
+            }
+
+            label{
+                margin-top: 1rem;
+                font-size: .8rem;
+                margin-bottom: .4rem;
+                font-weight: bold;
+                padding-top: .2rem;
+            }
+
+            input{
+                // margin-top: .3rem;
+                padding: .5rem .5rem;
+                margin-bottom: .3rem;
+                outline: none;
+                border: 1px solid $secondarydark;
+                border-radius: 3px;
+
+                &:focus, &:hover{
+                    border: 1px solid $secondarylight;
+                }
+            }
+
+            .box{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                a{
+                    margin-top: 3rem;
+                    padding: .5rem 1rem;
+                    color: $accentcolor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    outline: none;
+                    background-color: $secondarydark;
+                    color: $accentcolor;
+                    font-size: .8rem;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-radius: 2px;
+    
+                    &:hover,&:focus{
+                        background-color: #6492e7;
+                        // color: black;
+                    }
+
+                }
+
+                button{
+                    margin-top: 3rem;
+                    padding: .5rem 1rem;
+                    color: $accentcolor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    outline: none;
+                    background-color: $secondarydark;
+                    color: $accentcolor;
+                    font-size: .8rem;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-radius: 2px;
+    
+                    &:hover,&:focus{
+                        background-color: #6492e7;
+                        // color: black;
+                    }
+
+                    &.deletebtn{
+                        padding: .8rem 1rem;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
 }
