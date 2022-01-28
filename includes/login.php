@@ -10,9 +10,7 @@
         echo $username;
         echo $pwd;
         loginUser($username, $pwd, $conn);
-        // echo $result["id"];
     }else{
-        // header("Location: ../index.php?error=loginError");
         echo "not working";
     }
 

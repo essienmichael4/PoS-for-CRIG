@@ -1607,7 +1607,7 @@ main .usersPage{
                     &.active{
                         color: green;
                         background-color: rgba($color: #8bfc9a, $alpha: .3);
-                        
+
                     }
                 }
             }
@@ -1635,6 +1635,329 @@ main .usersPage{
                         color: #fff;
                     }
                 }
+            }
+        }
+    }
+}
+
+.editUser{
+    width: calc(100vw - 220px);
+    min-height: 100%;
+    padding: 0 .5rem;
+    // background-color: black;
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 4rem;
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+
+        .userid{
+            width: 50px;
+            height: 50px;
+            background-color: $secondarylight;
+            border-radius: 50%;
+            border: 3px solid $secondarydark;
+            cursor: pointer;
+        }
+
+        .userdetails{
+            position: absolute;
+            right: 0.5rem;
+            top: 4rem;
+            background-color: rgba($color: #20b2aa, $alpha: .8);
+            border-radius: 5px;
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 9rem;
+            transition: .5s ease;
+            z-index: 1000;
+
+            p{
+                padding: .3rem 0;
+                width: 100%;
+                color: $accentcolor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid $primarylight;
+
+                &:hover,&:focus{
+                    background-color: #ebebeb;
+                    color: $secondarylight;
+                }
+            }
+
+            a{
+                font-size: .8rem;
+                padding: .3rem 0;
+                width: 100%;
+                color: $accentcolor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+
+                &:hover,&:focus{
+                    background-color: #ebebeb;
+                    color: $secondarylight;
+                }
+            }
+
+            button{
+                padding: .3rem 3rem;
+                color: $accentcolor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: $accentcolor;
+                font-size: .8rem;
+                text-transform: uppercase;
+
+                &:hover,&:focus{
+                    background-color: #ebebeb;
+                    color: $secondarylight;
+                }
+            }
+        }
+
+    }
+
+    .editUserContainer{
+        height: calc(100% - 6rem);
+        width: 100%;       
+        background-color: white;
+        padding: 3rem 3rem;
+        display: flex;
+        justify-content: space-between;
+
+        .profile{
+            width: 30%;
+            // background-color: black;
+
+            h4{
+                color: blue;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            .profilePic{
+                height: 200px;
+                width: 200px;
+                background-color: red;
+            }
+        }
+
+        .profileDetails{
+            width: 70%;
+            // background-color: blue;
+            display: flex;
+            justify-content: space-between;
+
+            .left{
+                width: 45%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .box{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    // margin-bottom: .7rem;
+
+                    .boxContainer{
+                        width: 45%;
+                        
+                        label{
+                            font-size: .8rem;
+                            margin-bottom: .4rem;
+                        }
+                        input{
+                            margin-top: .3rem;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                label{
+                    font-size: .8rem;
+                    margin-bottom: .3rem;
+                    font-weight: bold;
+                }
+
+                input{
+                    padding: .5rem .5rem;
+                    margin-bottom: .7rem;
+                    outline: none;
+                    border: 1px solid $secondarydark;
+                    border-radius: 3px;
+
+                    &:focus, &:hover{
+                        border: 1px solid $secondarylight;
+                    }
+                }
+
+                select{
+                    padding: .3rem .5rem;
+                    width: 40%;
+                    margin-bottom: .3rem;
+                    cursor: pointer;
+                    border-radius: 4px;
+    
+                    &:focus,&:hover{
+                        outline: none;
+                        border: 1px solid $secondarylight;
+                    }
+    
+                    option{
+                        cursor: pointer;
+                        padding: .5rem 1rem;
+                        border-radius: 0px;
+                    }
+                }
+
+                .utype{
+                    margin-bottom: 1rem;
+                }
+
+                p{
+                    color: red;
+                    font-size: .8rem;
+                    text-align: center;
+                    visibility: hidden;
+                    background-color: rgba($color: #fc8b8b, $alpha: .3);
+                    width: 80%;
+                    align-self: center;
+                    padding: .2rem 0;
+                    border-radius: 3px;
+                    margin-top: 4rem;
+                    margin-bottom: 3rem;
+
+                    &.active{
+                        color: green;
+                        background-color: rgba($color: #8bfc9a, $alpha: .3);
+
+                    }
+                }
+
+                .box1{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    // justify-self: end;
+                    // align-self: flex-end;
+
+
+                    a{
+                        font-size: .8rem;
+                        padding: .5rem 1rem;
+                        border-radius: 2px;
+                        color: $accentcolor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        background-color: $secondarydark;
+        
+                        &:hover,&:focus{
+                            background-color: #ebebeb;
+                            color: $secondarylight;
+                        }
+                    }
+        
+                    button{
+                        padding: .5rem 1rem;
+                        color: $accentcolor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 2px;
+                        border: none;
+                        outline: none;
+                        background-color: blue;
+                        color: $accentcolor;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        cursor: pointer;
+        
+                        &:hover,&:focus{
+                            background-color: #6492e7;
+                            // color: black;
+                        }
+
+                        
+                    }
+
+                   
+                }
+
+                
+            }
+
+            .right{
+                width: 45%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                // background-color: white;
+                
+
+                    label{
+                        font-size: .8rem;
+                        margin-bottom: .4rem;
+                        font-weight: bold;
+                        padding-top: .2rem;
+                    }
+    
+                    input{
+                        // margin-top: .3rem;
+                        padding: .5rem .5rem;
+                        margin-bottom: .3rem;
+                        outline: none;
+                        border: 1px solid $secondarydark;
+                        border-radius: 3px;
+    
+                        &:focus, &:hover{
+                            border: 1px solid $secondarylight;
+                        }
+                    }
+
+                    button{
+                        margin-top: 3rem;
+                        padding: .5rem 1rem;
+                        color: $accentcolor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        outline: none;
+                        background-color: blue;
+                        color: $accentcolor;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        border-radius: 2px;
+        
+                        &:hover,&:focus{
+                            background-color: #6492e7;
+                            // color: black;
+                        }
+
+                        &.deleteAccount{
+                            padding: .8rem 1rem;
+                            background-color: red;
+                        }
+                    }
             }
         }
     }

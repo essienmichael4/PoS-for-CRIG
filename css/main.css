@@ -1911,4 +1911,384 @@ main .usersPage .addUser .userContainer .footer button:first-child {
   background-color: #beb8b8;
   color: #fff;
 }
+
+.editUser {
+  width: calc(100vw - 220px);
+  min-height: 100%;
+  padding: 0 .5rem;
+}
+
+.editUser header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.editUser header .userid {
+  width: 50px;
+  height: 50px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+  border: 3px solid #beb8b8;
+  cursor: pointer;
+}
+
+.editUser header .userdetails {
+  position: absolute;
+  right: 0.5rem;
+  top: 4rem;
+  background-color: rgba(32, 178, 170, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 1000;
+}
+
+.editUser header .userdetails p {
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.editUser header .userdetails p:hover, .editUser header .userdetails p:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+.editUser header .userdetails a {
+  font-size: .8rem;
+  padding: .3rem 0;
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+.editUser header .userdetails a:hover, .editUser header .userdetails a:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+.editUser header .userdetails button {
+  padding: .3rem 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.editUser header .userdetails button:hover, .editUser header .userdetails button:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+.editUser .editUserContainer {
+  height: calc(100% - 6rem);
+  width: 100%;
+  background-color: white;
+  padding: 3rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editUser .editUserContainer .profile {
+  width: 30%;
+}
+
+.editUser .editUserContainer .profile h4 {
+  color: blue;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.editUser .editUserContainer .profile .profilePic {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+.editUser .editUserContainer .profileDetails {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editUser .editUserContainer .profileDetails .left {
+  width: 45%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editUser .editUserContainer .profileDetails .left .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editUser .editUserContainer .profileDetails .left .box .boxContainer {
+  width: 45%;
+}
+
+.editUser .editUserContainer .profileDetails .left .box .boxContainer label {
+  font-size: .8rem;
+  margin-bottom: .4rem;
+}
+
+.editUser .editUserContainer .profileDetails .left .box .boxContainer input {
+  margin-top: .3rem;
+  width: 100%;
+}
+
+.editUser .editUserContainer .profileDetails .left label {
+  font-size: .8rem;
+  margin-bottom: .3rem;
+  font-weight: bold;
+}
+
+.editUser .editUserContainer .profileDetails .left input {
+  padding: .5rem .5rem;
+  margin-bottom: .7rem;
+  outline: none;
+  border: 1px solid #beb8b8;
+  border-radius: 3px;
+}
+
+.editUser .editUserContainer .profileDetails .left input:focus, .editUser .editUserContainer .profileDetails .left input:hover {
+  border: 1px solid #20b2aa;
+}
+
+.editUser .editUserContainer .profileDetails .left select {
+  padding: .3rem .5rem;
+  width: 40%;
+  margin-bottom: .3rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editUser .editUserContainer .profileDetails .left select:focus, .editUser .editUserContainer .profileDetails .left select:hover {
+  outline: none;
+  border: 1px solid #20b2aa;
+}
+
+.editUser .editUserContainer .profileDetails .left select option {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 0px;
+}
+
+.editUser .editUserContainer .profileDetails .left .utype {
+  margin-bottom: 1rem;
+}
+
+.editUser .editUserContainer .profileDetails .left p {
+  color: red;
+  font-size: .8rem;
+  text-align: center;
+  visibility: hidden;
+  background-color: rgba(252, 139, 139, 0.3);
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: .2rem 0;
+  border-radius: 3px;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.editUser .editUserContainer .profileDetails .left p.active {
+  color: green;
+  background-color: rgba(139, 252, 154, 0.3);
+}
+
+.editUser .editUserContainer .profileDetails .left .box1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editUser .editUserContainer .profileDetails .left .box1 a {
+  font-size: .8rem;
+  padding: .5rem 1rem;
+  border-radius: 2px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  background-color: #beb8b8;
+}
+
+.editUser .editUserContainer .profileDetails .left .box1 a:hover, .editUser .editUserContainer .profileDetails .left .box1 a:focus {
+  background-color: #ebebeb;
+  color: #20b2aa;
+}
+
+.editUser .editUserContainer .profileDetails .left .box1 button {
+  padding: .5rem 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.editUser .editUserContainer .profileDetails .left .box1 button:hover, .editUser .editUserContainer .profileDetails .left .box1 button:focus {
+  background-color: #6492e7;
+}
+
+.editUser .editUserContainer .profileDetails .right {
+  width: 45%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editUser .editUserContainer .profileDetails .right label {
+  font-size: .8rem;
+  margin-bottom: .4rem;
+  font-weight: bold;
+  padding-top: .2rem;
+}
+
+.editUser .editUserContainer .profileDetails .right input {
+  padding: .5rem .5rem;
+  margin-bottom: .3rem;
+  outline: none;
+  border: 1px solid #beb8b8;
+  border-radius: 3px;
+}
+
+.editUser .editUserContainer .profileDetails .right input:focus, .editUser .editUserContainer .profileDetails .right input:hover {
+  border: 1px solid #20b2aa;
+}
+
+.editUser .editUserContainer .profileDetails .right button {
+  margin-top: 3rem;
+  padding: .5rem 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: #fff;
+  font-size: .8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.editUser .editUserContainer .profileDetails .right button:hover, .editUser .editUserContainer .profileDetails .right button:focus {
+  background-color: #6492e7;
+}
+
+.editUser .editUserContainer .profileDetails .right button.deleteAccount {
+  padding: .8rem 1rem;
+  background-color: red;
+}
 /*# sourceMappingURL=main.css.map */
