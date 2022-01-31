@@ -53,7 +53,7 @@ function updateProducts(){
             `;
         })
         cartBody.innerHTML = result.join('');
-        totalPrice.textContent = totalSumPrice();
+        totalPrice.textContent = `Total: Gh¢ `+totalSumPrice();
         // console.log(result);
     }else{
         cartBody.innerHTML = "";
@@ -69,7 +69,7 @@ function updateCart(product){
                 cartProducts[i].count = cartProducts[i].stock;
             }
             cartProducts[i].price = cartProducts[i].basePrice * cartProducts[i].count;
-            totalPrice.textContent = totalSumPrice()
+            totalPrice.textContent = `Total: Gh¢ `+totalSumPrice()
             return;
         }
     }
@@ -124,7 +124,6 @@ cartBody.addEventListener("click",(e)=>{
                 cartProducts.splice(i, 1);
             }else if(closes){
                 cartProducts.splice(i, 1);
-                console.log(cartProducts);
             }
             updateProducts();
         }
@@ -136,14 +135,12 @@ makeOrder.addEventListener("click", ()=>{
     let productsincart = JSON.stringify(cartProducts);
     let params = "user="+user+"&totalPrice="+sumofCartItems+"&cart="+productsincart;
 
-    // console.log(params);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "../includes/buyProduct.php");
     xhr.setRequestHeader("Content-type", 'application/x-www-form-urlencoded');
     xhr.onload = () =>{
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status == 200){
-                // alert(responseText)
             }
         }
     }

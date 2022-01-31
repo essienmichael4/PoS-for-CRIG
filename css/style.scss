@@ -7,6 +7,26 @@
     list-style-type: none;
 }
 
+:root{
+    --bg-deep-green: rgb(0, 43, 2);
+    --bg-light-green: rgb(2, 120, 6);
+    --bg-deep-yellow: rgb(178, 178, 0);
+    --bg-light-yellow: rgb(255, 255, 0);
+    --bg-deep-grey: #beb8b8;
+    --bg-light-grey: #ebebeb;
+    --bg-light-white: #fff;
+
+    --txt-light: #ebebeb;
+    --txt-lighter: #fff;
+    --txt-dark: #beb8b8;
+    --txt-darker: rgb(0, 0, 0);
+
+    --accent-color: yellow;
+
+    --err: red;
+
+}
+
 $primarylight: #ebebeb;
 $secondarylight: #fff;
 $primarydark: #fff;
@@ -15,7 +35,7 @@ $accentcolor: #fff;
 
 body{
     width: 100%;
-    background-color: $primarylight;
+    background-color: var(--bg-light-grey);
 }
 .flex{
     display: flex;
@@ -30,13 +50,21 @@ header{
     width: 100%;
     max-width: 1440px;
     height: 5rem;
-    background-color: blue;
+    background-color: var(--bg-deep-green);
     color: $primarylight;
     align-items: center;
     padding: 0 5rem;
+    
+    img{
+        height: 50px;
+        width: 50px;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
 
     h1{
         font-size: 1.5rem;
+        color: var(--bg-light-yellow);
     }
 }
 
@@ -47,9 +75,9 @@ main{
     height: 500px;
     align-items: center;
     justify-content: center;
-    // height: calc();
 
     form{
+        // padding: 0 2rem;
         height: 300px;
         width: 400px;
         background-color: $primarylight;
@@ -67,59 +95,54 @@ main{
             text-transform: uppercase;
         }
 
-        .error{
-            height: 1rem;
-            margin-bottom: 1rem;
-            // border: 1px solid red;
-            width: 80%;
-            text-align: center;
+        p{
+            color: var(--err);
             font-size: .8rem;
-            color: red;
+            text-align: center;
+            visibility: hidden;
+            background-color: rgba($color: #fc8b8b, $alpha: .3);
+            width: 80%;
+            align-self: center;
+            padding: .2rem 0;
+            border-radius: 3px;
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+
+            &.active{
+                visibility: visible;
+            }
         }
 
-        .box{
-            width: 70%;
-            border: 1px solid blue;
-            position: relative;
-            margin-bottom: 2rem;
-            border-radius: 3px;
-
-            // label{
-            //     position: absolute;
-            //     top: .2rem;
-            //     left: 1rem;
-            //     pointer-events: none;
-            //     color: #000;
-            //     font-size: .8rem;
-            //     transition: .5s ease;
-            // }
-
+           
             input{
-                width: 100%;
-                line-height: 1.2rem;
-                padding: .3rem 1rem;
+                width: 70%;
+                padding: .5rem .5rem;
+                margin-bottom: 1rem;
                 outline: none;
-                border: none;
+                border: 1px solid var(--bg-light-green);
+                border-radius: 3px;
+
+                &:focus, &:hover{
+                    border: 1px solid var(--bg-deep-yellow);
+                }
             }
 
-            // input:focus ~ label,
-            // input:valid ~ label{
-            //     color: $primarylight;
-            //     background: #110c0f;
-            //     left: 0px;
-            //     top: -8px;
-            //     transform: scale(.7);
-            // }           
-        }
-
         button{
-            background-color: blue;
+            background-color: var(--bg-light-green);
             border: none;
+            outline: none;
             padding: .5rem 2rem;
-            color: $primarylight;
+            color: var(--bg-light-yellow);
             text-transform: uppercase;
             align-self: flex-end;
+            margin-top: 1rem;
             margin-right: 3.9rem;
+            border-radius: 3px;
+
+            &:focus, &:hover{
+                background-color: var(--bg-deep-green);
+                cursor: pointer;
+            }
         }
     }
 }

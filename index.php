@@ -13,23 +13,34 @@
 </head>
 <body>
     <header class="flex">
-        <h1>CRIG-BUY PRODUCT</h1>
+        <img src="./assets/logo.jpg" alt="">
+        <h1>CRIG - BUY PRODUCT SHOP</h1>
     </header>
     <main class="flex">
         <form class="login-form flex" action="./includes/login.php" method="POST">
             <header class="flex">
                 Log in
             </header>
+            <?php
 
-            <p class="error"></p>
-            <div class="box">
-                <input type="text" name="username" placeholder="Username">
-                <!-- <label>Username</label> -->
-            </div>
-            <div class="box">
-                <input type="text" name="password" placeholder="Password">
-                <!-- <label>Password</label> -->
-            </div>
+                if(isset($_GET["error"])){
+                    if($_GET["error"] == "userNotExist"){
+                        echo '<p class="active">User does not Exist</p>';
+                    }else if($_GET["error"] == "wrongpwd"){
+                        echo '<p class="active">Wrong Passsword</p>';
+                    }
+                }else{
+                    echo '<p></p>';
+                }
+
+                if(isset($_GET["user"])){
+                    echo '<input type="text" name="username" placeholder="Username" value="'.$_GET["user"].'">';
+                }else{
+                    echo '<input type="text" name="username" placeholder="Username">';
+                }
+            ?>
+           
+            <input type="password" name="password" placeholder="Password">
 
             <button name="loginbtn" class="loginbtn">log in</button>
         </form>

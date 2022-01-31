@@ -12,8 +12,6 @@ xhr.onload = () =>{
 }
 xhr.send()
 
-
-
 let order = document.querySelector(".order");
 
 let xhr2 = new XMLHttpRequest();

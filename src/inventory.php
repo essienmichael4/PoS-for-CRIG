@@ -15,23 +15,7 @@
                         <i class="fas fa-plus"></i>
                         <h4>Add new product</h4>
                     </li>
-                    <li class="existing-products">
-                        <div class="img">
-
-                        </div>
-                        
-                        <div class="productSummary">
-                            <h4>Add new product</h4>
-                            <p>Gh¢ 1500.00</p>
-                            <h2>.</h2>
-                            <p>200 products</p>
-                        </div>
-
-                        <div class="btn">
-                            <button>edit</button>
-                            <button>delete</button>
-                        </div>
-                    </li>
+                    
                     
                 </ul>
             </div>
@@ -56,6 +40,11 @@
                         </div>
                     </div>
                     
+                    <label for="">Category</label>
+                    <select name="category" id="category">
+                        <option value="crig">CRIG Product</option>
+                        <option value="cpc">CPC Product</option>
+                    </select>
                     
                     <label for="">Product Image</label>
                     <input type="file" name="productPic">

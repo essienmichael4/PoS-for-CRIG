@@ -18,12 +18,12 @@
                 $_SESSION["email"] = $row['email'];
                 $_SESSION["usertype"] = $row['usertype'];
                 $_SESSION["uid"] = $row['id'];
-                header("location: ../src/mainbody.php?pgname=productsbody");
+                header("location: ../src/mainbody.php?pgname=products");
             }else{
-                header("location: ../index.php?success=wrongpwd");
+                header("location: ../index.php?error=wrongpwd&user=".$username);
             }
         }else{
-            header("location: ../index.php?success=userNotExist");
+            header("location: ../index.php?error=userNotExist");
         }
     }
 

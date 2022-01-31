@@ -135,6 +135,38 @@
             }
         }
 
-    }else{
+    }else if(isset($_POST["deleteProduct"])){
+        include_once("./db.inc.php");
+        $user = mysqli_real_escape_string($conn,$_POST["user"]);
+        $pname = mysqli_real_escape_string($conn,$_POST["pname"]);
+        $pid = (int)mysqli_real_escape_string($conn, $_POST["pid"]);
+        $ppic = mysqli_real_escape_string($conn, $_POST["ppic"]);
+
+
+        $sql1 = "INSERT INTO `deletedproducts`(`productName`, `productId`, `deletedBy`) 
+        VALUES('$pname', $pid, '$name')";
+
+        if(mysqli_query($conn, $sql1)){
+            $sql2 = "DELETE FROM `products` WHERE `id` = $pid;";
+            if(mysqli_query($conn, $sql2)){
+                if($ppic != "general.png"){
+                    unlink('../assets/'.$ppic);
+                }
+                header("Location: ../src/mainbody.php?pgname=inventorybody");
+                exit();
+            
+            }else{
+                header("Location: ../src/mainbody.php?pgname=delete&id=".$pid."&error=conn2");
+                exit();
+            }
+        }else{
+            header("Location: ../src/mainbody.php?pgname=delete&id=".$pid."&error=conn");
+            exit();
+        }
+
+
+        
+    }
+    else{
         header("location: ../src/mainbody.php?pgname=inventorybody");
     }

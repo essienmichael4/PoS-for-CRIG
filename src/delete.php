@@ -1,4 +1,4 @@
-    <?php
+<?php
         include_once("../includes/db.inc.php");
         $id = $_GET["id"];
 
@@ -7,10 +7,10 @@
         $product = mysqli_fetch_assoc($result);
     ?>
     
-    <section class="editPage">
+    <section class="deletePage">
         <div class="productcontainer">
             <header>
-                <h2>Edit Product</h2>
+                <h2>Delete/Edit Product</h2>
             </header>
 
             <li class="edit-products">
@@ -61,9 +61,10 @@
                     <input type="file" name="productPic">
 
                     <div class="btn">
-                        <a href="?pgname=inventory">Cancel</a>
+                        <a href="?pgname=inventorybody">Cancel</a>
 
-                        <button type="submit" name="editProduct">Save Changes</button>
+                        <button type="submit" class="edit" name="editProduct">Save Changes</button>
+                        <button type="submit" class="delete" name="deleteProduct">Delete Product</button>
                     </div>
             </div>
         </form>

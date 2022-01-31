@@ -39,13 +39,6 @@
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Email</th>
-                    <?php
-                        if($_SESSION["usertype"] =="superadmin"){
-                    ?>
-                    <th>Password</th>
-                    <?php
-                        }
-                    ?>
                     <th>User type</th>
                     <?php
                         if($_SESSION["usertype"] == "superadmin" || $_SESSION["usertype"] == "admin"){
@@ -67,13 +60,7 @@
                     <td class="tr"><?=$row["firstname"]?></td>
                     <td><?=$row["lastname"]?></td>
                     <td class="tr"><?=$row["email"]?></td>
-                    <?php
-                        if($_SESSION["usertype"] =="superadmin"){
-                    ?>
-                    <td><?=$row["password"]?></td>
-                    <?php
-                        }
-                    ?>
+                    
                     <td class="tr"><?=$row["usertype"]?></td>
                     <?php
                         if($_SESSION["usertype"] == "superadmin" || $_SESSION["usertype"] == "admin"){

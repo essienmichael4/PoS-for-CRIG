@@ -27,3 +27,18 @@ let ordersList = document.querySelector(".ordersList");
         }
     }
     xhr4.send()
+
+    let item = document.querySelector(".item");
+
+    let xhr5 = new XMLHttpRequest();
+    xhr5.open("GET", "../includes/todaysItems.php", true);
+    xhr5.onload = () =>{
+        if(xhr5.readyState == XMLHttpRequest.DONE){
+            if(xhr5.status == 200){
+                let data = xhr5.response;
+
+                item.innerHTML += data;
+            }
+        }
+    }
+    xhr5.send()

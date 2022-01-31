@@ -54,7 +54,7 @@
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                     <option value="super">Superadmin</option>
-                    </select>
+                </select>
                 <?php
                     }
                 ?> 

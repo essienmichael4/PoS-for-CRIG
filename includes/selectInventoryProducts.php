@@ -33,8 +33,7 @@
                         <div class="btn">
                             
                             <a href="?pgname=edit&id='.$products["id"].'">edit</a>
-                            
-                            <button>delete</button>
+                            <a href="?pgname=delete&id='.$products["id"].'">delete</a>
                         </div>
                     </li>';
     }

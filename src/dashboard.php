@@ -15,8 +15,8 @@
                 <button class="week">This Week</button>
                 <button class="month">This Month</button>
                 <button class="year">This Year</button>
-                <button class="items">Products</button>
-                <button class="users">Users</button>
+                <!-- <button class="items">Products</button> -->
+                <!-- <button class="users">Users</button> -->
             </div>
             
 

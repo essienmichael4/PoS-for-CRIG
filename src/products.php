@@ -30,7 +30,6 @@
                     include_once("../includes/db.inc.php");
 
                     $sql = 'SELECT * FROM `products` WHERE stock > 0;';
-                    // $sql1 = 'SELECT * FROM products;';
                     $result = $conn->query($sql);
                 ?>
 
@@ -50,6 +49,7 @@
                                 <h2 class="productName"><?=$products["productName"]?></h2>
                                 <p class="price">Gh¢ <span class="priceValue"><?=$products["productPrice"]?></span></p>
                                 <i><span class="productStock"><?=$products["stock"]?></span> products left</i>
+                                <h3>CRIG Product</h3>
                             </div>
                         </li>
                     <?php

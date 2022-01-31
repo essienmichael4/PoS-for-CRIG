@@ -8,9 +8,25 @@
   list-style-type: none;
 }
 
+:root {
+  --bg-deep-green: rgb(0, 43, 2);
+  --bg-light-green: rgb(2, 120, 6);
+  --bg-deep-yellow: rgb(178, 178, 0);
+  --bg-light-yellow: rgb(255, 255, 0);
+  --bg-deep-grey: #beb8b8;
+  --bg-light-grey: #ebebeb;
+  --bg-light-white: #fff;
+  --txt-light: #ebebeb;
+  --txt-lighter: #fff;
+  --txt-dark: #beb8b8;
+  --txt-darker: rgb(0, 0, 0);
+  --accent-color: yellow;
+  --err: red;
+}
+
 body {
   width: 100%;
-  background-color: #ebebeb;
+  background-color: var(--bg-light-grey);
 }
 
 .flex {
@@ -28,7 +44,7 @@ header {
   width: 100%;
   max-width: 1440px;
   height: 5rem;
-  background-color: blue;
+  background-color: var(--bg-deep-green);
   color: #ebebeb;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -36,8 +52,16 @@ header {
   padding: 0 5rem;
 }
 
+header img {
+  height: 50px;
+  width: 50px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
 header h1 {
   font-size: 1.5rem;
+  color: var(--bg-light-yellow);
 }
 
 main {
@@ -78,39 +102,55 @@ main form header {
   text-transform: uppercase;
 }
 
-main form .error {
-  height: 1rem;
-  margin-bottom: 1rem;
-  width: 80%;
-  text-align: center;
+main form p {
+  color: var(--err);
   font-size: .8rem;
-  color: red;
+  text-align: center;
+  visibility: hidden;
+  background-color: rgba(252, 139, 139, 0.3);
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: .2rem 0;
+  border-radius: 3px;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
 }
 
-main form .box {
+main form p.active {
+  visibility: visible;
+}
+
+main form input {
   width: 70%;
-  border: 1px solid blue;
-  position: relative;
-  margin-bottom: 2rem;
+  padding: .5rem .5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 1px solid var(--bg-light-green);
   border-radius: 3px;
 }
 
-main form .box input {
-  width: 100%;
-  line-height: 1.2rem;
-  padding: .3rem 1rem;
-  outline: none;
-  border: none;
+main form input:focus, main form input:hover {
+  border: 1px solid var(--bg-deep-yellow);
 }
 
 main form button {
-  background-color: blue;
+  background-color: var(--bg-light-green);
   border: none;
+  outline: none;
   padding: .5rem 2rem;
-  color: #ebebeb;
+  color: var(--bg-light-yellow);
   text-transform: uppercase;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-top: 1rem;
   margin-right: 3.9rem;
+  border-radius: 3px;
+}
+
+main form button:focus, main form button:hover {
+  background-color: var(--bg-deep-green);
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

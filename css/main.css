@@ -8,13 +8,31 @@
   list-style-type: none;
 }
 
+:root {
+  --bg-deep-green: rgb(0, 43, 2);
+  --bg-light-green: rgb(2, 120, 6);
+  --bg-deep-yellow: rgb(178, 178, 0);
+  --bg-light-yellow: rgb(255, 255, 0);
+  --bg-deep-grey: #beb8b8;
+  --bg-light-grey: #ebebeb;
+  --bg-light-white: #fff;
+  --txt-light: #ebebeb;
+  --txt-deep-yellow: rgb(178, 178, 0);
+  --txt-light-yellow: rgb(255, 255, 0);
+  --txt-deep-green: rgb(0, 43, 2);
+  --txt-light-green: rgb(2, 120, 6);
+  --txt-lighter: #fff;
+  --txt-dark: #beb8b8;
+  --txt-darker: rgb(0, 0, 0);
+}
+
 img {
   max-width: 100%;
 }
 
 body {
   width: 100%;
-  background-color: #ebebeb;
+  background-color: var(--bg-light-grey);
 }
 
 main {
@@ -31,12 +49,11 @@ main {
 
 .menu {
   width: 220px;
-  background-color: #20b2aa;
+  background-color: var(--bg-deep-green);
   height: 40.6rem;
   position: relative;
   overflow: hidden;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  text-overflow: ellipsis;
 }
 
 .menu.active {
@@ -44,12 +61,12 @@ main {
 }
 
 .menu h1 {
-  color: #ebebeb;
+  color: var(--bg-light-yellow);
   font-size: 1rem;
-  padding: 1rem;
+  margin: 2rem auto;
+  margin-left: 1rem;
+  text-overflow: ellipsis;
   overflow: hidden;
-  max-height: 43px;
-  margin-bottom: 2.5rem;
 }
 
 .menu h1 span.active {
@@ -81,15 +98,15 @@ main {
   width: 280px;
   padding: 1rem;
   display: block;
-  color: #ebebeb;
+  color: var(--bg-deep-yellow);
   text-transform: uppercase;
 }
 
 .menu nav ul li a.active {
-  background-color: #ebebeb;
+  background-color: var(--bg-light-grey);
   border-bottom-left-radius: 40px;
   border-top-left-radius: 40px;
-  color: #20b2aa;
+  color: var(--txt-deep-green);
 }
 
 .menu nav ul li a span {
@@ -114,7 +131,7 @@ section.active {
 section header {
   width: 98%;
   height: 4.5rem;
-  background-color: #fff;
+  background-color: var(--bg-deep-yellow);
   margin: 0 auto;
   margin-top: .3rem;
   display: -webkit-box;
@@ -132,6 +149,7 @@ section header {
 
 section header h3 {
   font-size: 1.5rem;
+  color: var(--txt-deep-green);
 }
 
 section header .userid {
@@ -251,7 +269,7 @@ section .container .header .totalSales {
   width: 270px;
   height: 100px;
   border-radius: 10px;
-  background-color: darkcyan;
+  background-color: var(--bg-light-green);
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   padding: .5rem;
@@ -259,10 +277,10 @@ section .container .header .totalSales {
 
 section .container .header .totalSales h4 {
   font-size: 12px;
-  background-color: white;
+  background-color: var(--txt-light);
   width: 6rem;
   text-align: center;
-  color: #20b2aa;
+  color: var(--txt-deep-yellow);
   padding: .15rem 0;
   border-radius: 2px;
 }
@@ -278,7 +296,7 @@ section .container .header .totalItems, section .container .header .numberSales 
   width: 270px;
   height: 100px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--txt-lighter);
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   padding: .5rem;
@@ -290,10 +308,10 @@ section .container .header .totalItems.active, section .container .header .numbe
 
 section .container .header .totalItems h4, section .container .header .numberSales h4 {
   font-size: 12px;
-  background-color: #20b2aa;
+  background-color: var(--txt-light-green);
   width: 6.5rem;
   text-align: center;
-  color: #fff;
+  color: var(--txt-deep-yellow);
   padding: .2rem 0;
   border-radius: 2px;
 }
@@ -330,7 +348,7 @@ section .container .products::-webkit-scrollbar {
 section .container .products .card {
   width: 210px;
   height: 250px;
-  background-color: #fff;
+  background-color: var(--bg-light-green);
   margin-bottom: 8rem;
   padding: .5rem;
   position: relative;
@@ -343,7 +361,7 @@ section .container .products .card {
 
 section .container .products .card .productImg {
   width: 90%;
-  height: 180px;
+  height: 174px;
   background-color: red;
   z-index: 10;
   position: relative;
@@ -376,27 +394,36 @@ section .container .products .card .productSummary {
 }
 
 section .container .products .card .productSummary h2 {
-  color: #222020;
+  line-height: 1.5;
+  letter-spacing: .1rem;
+  color: var(--txt-light);
   margin-bottom: .5rem;
   font-size: 1rem;
   text-transform: capitalize;
 }
 
 section .container .products .card .productSummary i {
-  color: #beb8b8;
+  color: var(--txt-light);
   font-size: .8rem;
 }
 
 section .container .products .card .productSummary p {
   font-size: 1rem;
   margin-bottom: .5rem;
-  color: #616161;
+  color: var(--bg-light-yellow);
+}
+
+section .container .products .card .productSummary h3 {
+  margin-top: .5rem;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--txt-light);
 }
 
 .cart {
   width: 350px;
   height: 40.6rem;
-  background-color: #20b2aa;
+  background-color: var(--bg-deep-green);
   padding: 1rem;
 }
 
@@ -414,6 +441,10 @@ section .container .products .card .productSummary p {
   margin-bottom: 1rem;
 }
 
+.cart .cartHeader h2 {
+  color: var(--txt-light-yellow);
+}
+
 .cart .cartBody {
   width: 100%;
   height: calc(100% - 11rem);
@@ -428,7 +459,7 @@ section .container .products .card .productSummary p {
 .cart .cartBody li {
   width: 100%;
   height: 6rem;
-  background-color: #fff;
+  background-color: var(--bg-light-white);
   border-radius: 7px;
   margin-bottom: .5rem;
   display: -webkit-box;
@@ -453,8 +484,7 @@ section .container .products .card .productSummary p {
 .cart .cartBody li .cpimage {
   width: 80px;
   height: 80px;
-  background-color: red;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 
 .cart .cartBody li .cpimage img {
@@ -481,10 +511,12 @@ section .container .products .card .productSummary p {
 }
 
 .cart .cartBody li .cpdetails h3 {
-  font-size: 12px;
-  width: 40px;
+  font-size: 14px;
+  width: 50px;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: var(--txt-light-green);
+  margin-bottom: .5rem;
 }
 
 .cart .cartBody li .cpdetails p {
@@ -556,8 +588,8 @@ section .container .products .card .productSummary p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #20b2aa;
-  background-color: #ececec;
+  color: var(--bg-light-green);
+  background-color: var(--bg-light-grey);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -582,6 +614,7 @@ section .container .products .card .productSummary p {
 
 .cart .cartBody li .cptotal .itemPrice {
   font-size: 12px;
+  color: var(--txt-deep-yellow);
   height: 4px;
   text-align: center;
 }
@@ -605,21 +638,33 @@ section .container .products .card .productSummary p {
 
 .cart .cartFooter h2 {
   margin-bottom: 1rem;
+  color: var(--bg-light-yellow);
 }
 
 .cart .cartFooter button {
-  padding: .4rem 2rem;
-  text-transform: uppercase;
-  background-color: #ebebeb;
+  padding: .7rem 4rem;
+  color: var(--txt-light-green);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
-  border-radius: 3px;
+  outline: none;
+  background-color: var(--txt-light-yellow);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
   cursor: pointer;
+  border-radius: 2px;
 }
 
-.cart .cartFooter button:hover {
-  background-color: #20b2aa;
-  border: 1px solid #fff;
-  color: #fff;
+.cart .cartFooter button:hover, .cart .cartFooter button:focus {
+  background-color: var(--bg-deep-yellow);
 }
 
 main .inventory {
@@ -643,7 +688,7 @@ main .inventory .inventory-items {
 main .inventory .inventory-items header {
   width: 100%;
   height: 4rem;
-  background-color: #fff;
+  background-color: var(--bg-deep-yellow);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -655,6 +700,10 @@ main .inventory .inventory-items header {
           justify-content: space-between;
   position: relative;
   padding: 0 1rem;
+}
+
+main .inventory .inventory-items header h2 {
+  color: var(--txt-deep-green);
 }
 
 main .inventory .inventory-items header .userid {
@@ -790,7 +839,7 @@ main .inventory .inventory-items ul li {
 
 main .inventory .inventory-items ul li.add-new-product {
   background-color: transparent;
-  border: 1px dashed red;
+  border: 1px dashed var(--bg-deep-green);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -810,7 +859,7 @@ main .inventory .inventory-items ul li.add-new-product {
 }
 
 main .inventory .inventory-items ul li.add-new-product h4, main .inventory .inventory-items ul li.add-new-product i {
-  color: red;
+  color: var(--txt-deep-green);
   margin: 1rem;
   text-transform: capitalize;
 }
@@ -829,13 +878,12 @@ main .inventory .inventory-items ul .existing-products {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--bg-light-green);
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 main .inventory .inventory-items ul .existing-products .img {
-  background-color: red;
   width: 80%;
   height: 180px;
   overflow: hidden;
@@ -884,33 +932,25 @@ main .inventory .inventory-items ul .existing-products .btn a {
   cursor: pointer;
   border: none;
   text-transform: uppercase;
-  background-color: #20b2aa;
+  background-color: var(--bg-light-green);
   color: #fff;
-  padding: .5rem 2.2rem;
+  padding: .5rem 2rem;
   margin-bottom: 0;
+  font-size: .8rem;
 }
 
-main .inventory .inventory-items ul .existing-products .btn button {
-  outline: none;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  background-color: #20b2aa;
-  color: #fff;
+main .inventory .inventory-items ul .existing-products .btn a:focus, main .inventory .inventory-items ul .existing-products .btn a:hover {
+  opacity: .7;
 }
 
-main .inventory .inventory-items ul .existing-products .btn button:nth-child(2) {
+main .inventory .inventory-items ul .existing-products .btn a:nth-child(2) {
+  padding: .5rem 1rem;
   background-color: red;
-  padding: .5rem 1.5rem;
-}
-
-main .inventory .inventory-items ul .existing-products .btn button:nth-child(1) {
-  padding: .5rem 2.2rem;
 }
 
 main .inventory .add-inventory {
   width: 30%;
-  background-color: #20b2aa;
+  background-color: var(--bg-deep-green);
   height: inherit;
   padding: .5rem;
   display: none;
@@ -920,7 +960,7 @@ main .inventory .add-inventory {
 
 main .inventory .add-inventory .header {
   height: 4rem;
-  background-color: white;
+  background-color: var(--bg-deep-yellow);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -934,11 +974,15 @@ main .inventory .add-inventory .header {
   position: relative;
 }
 
+main .inventory .add-inventory .header h2 {
+  color: var(--txt-deep-green);
+}
+
 main .inventory .add-inventory .header i {
   position: absolute;
   right: .7rem;
   top: .5rem;
-  color: red;
+  color: var(--txt-lighter);
 }
 
 main .inventory .add-inventory form {
@@ -960,11 +1004,16 @@ main .inventory .add-inventory form label {
 
 main .inventory .add-inventory form input {
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding: .5rem;
   outline: none;
   border-radius: 5px;
-  border: none;
+  border: 1px solid var(--bg-deep-green);
+}
+
+main .inventory .add-inventory form input:focus, main .inventory .add-inventory form input:hover {
+  outline: none;
+  border: 1px solid var(--bg-light-yellow);
 }
 
 main .inventory .add-inventory form div {
@@ -992,21 +1041,45 @@ main .inventory .add-inventory form div div {
   width: 40%;
 }
 
+main .inventory .add-inventory form select {
+  padding: .3rem .5rem;
+  width: 40%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+main .inventory .add-inventory form select:focus, main .inventory .add-inventory form select:hover {
+  outline: none;
+  border: 1px solid var(--txt-light-yellow);
+}
+
+main .inventory .add-inventory form select option {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 0px;
+}
+
 main .inventory .add-inventory form input[type=file] {
-  background-color: #fff;
+  background-color: var(--bg-light-white);
 }
 
 main .inventory .add-inventory form button {
-  margin-top: 10rem;
+  margin-top: 3rem;
   padding: .7rem;
   outline: none;
   border: none;
-  background-color: black;
-  font-weight: medium;
+  background-color: var(--bg-light-yellow);
+  font-weight: bold;
   line-height: 1.2rem;
-  color: #fff;
+  color: var(--txt-deep-green);
   border-radius: 2px;
   cursor: pointer;
+}
+
+main .inventory .add-inventory form button:hover, main .inventory .add-inventory form button:focus {
+  color: var(--bg-light-green);
+  background-color: var(--bg-deep-yellow);
 }
 
 main .dashboard {
@@ -1152,6 +1225,11 @@ main .dashboard .filterbtns button {
   margin-right: 2rem;
 }
 
+main .dashboard .filterbtns button:hover, main .dashboard .filterbtns button:focus {
+  background-color: var(--txt-deep-green);
+  color: var(--txt-deep-yellow);
+}
+
 main .dashboard .headerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1176,15 +1254,15 @@ main .dashboard .headerContainer div {
 }
 
 main .dashboard .headerContainer div:nth-child(1) {
-  background-color: #20b2aa;
+  background-color: var(--bg-light-green);
 }
 
 main .dashboard .headerContainer div:nth-child(1) h4 {
   font-size: 12px;
-  background-color: #fff;
+  background-color: var(--txt-light);
   width: 6rem;
   text-align: center;
-  color: #20b2aa;
+  color: var(--txt-deep-green);
   padding: .15rem 0;
   border-radius: 2px;
 }
@@ -1194,7 +1272,7 @@ main .dashboard .headerContainer div:nth-child(1) i {
   top: 3.5rem;
   left: 1rem;
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--txt-light-yellow);
 }
 
 main .dashboard .headerContainer div:nth-child(1) p {
@@ -1206,10 +1284,10 @@ main .dashboard .headerContainer div:nth-child(1) p {
 
 main .dashboard .headerContainer div h4 {
   font-size: 12px;
-  background-color: #20b2aa;
+  background-color: var(--bg-light-grey);
   width: 6.5rem;
   text-align: center;
-  color: #fff;
+  color: var(--txt-deep-green);
   padding: .15rem 0;
   border-radius: 2px;
 }
@@ -1219,11 +1297,11 @@ main .dashboard .headerContainer div i {
   top: 3rem;
   left: 1rem;
   font-size: 3rem;
-  color: #20b2aa;
+  color: var(--txt-light-green);
 }
 
 main .dashboard .headerContainer div p {
-  color: #beb8b8;
+  color: var(--txt-dark);
   font-size: 2.5rem;
   margin-top: 2rem;
   text-align: right;
@@ -1254,7 +1332,7 @@ main .dashboard .orders table {
 main .dashboard .orders table thead {
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  color: #20b2aa;
+  color: var(--txt-light-green);
 }
 
 main .dashboard .orders table th {
@@ -1272,7 +1350,7 @@ main .dashboard .orders table td.tr {
 }
 
 main .dashboard .orders table tr:nth-child(even) {
-  background-color: #beb8b8;
+  background-color: var(--bg-deep-grey);
 }
 
 .editPage {
@@ -1337,9 +1415,8 @@ main .dashboard .orders table tr:nth-child(even) {
 }
 
 .editPage .productcontainer .edit-products .img {
-  background-color: red;
-  width: 80%;
-  height: 220px;
+  width: 79%;
+  height: 216px;
   overflow: hidden;
   border-radius: 50%;
   margin: .5rem;
@@ -1419,7 +1496,7 @@ main .dashboard .orders table tr:nth-child(even) {
 .editPage .editContainer .innerContainer {
   height: 100%;
   width: 70%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--txt-deep-yellow);
   padding: 2rem 2rem 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1442,7 +1519,11 @@ main .dashboard .orders table tr:nth-child(even) {
   padding: .5rem;
   outline: none;
   border-radius: 5px;
-  border: none;
+  border: 1px solid var(--txt-deep-yellow);
+}
+
+.editPage .editContainer .innerContainer input:focus, .editPage .editContainer .innerContainer input:hover {
+  border: 1px solid var(--txt-deep-green);
 }
 
 .editPage .editContainer .innerContainer select {
@@ -1451,11 +1532,12 @@ main .dashboard .orders table tr:nth-child(even) {
   margin-bottom: 2rem;
   cursor: pointer;
   border-radius: 4px;
+  border: 1px solid var(--txt-deep-yellow);
 }
 
 .editPage .editContainer .innerContainer select:focus, .editPage .editContainer .innerContainer select:hover {
   outline: none;
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--txt-deep-green);
 }
 
 .editPage .editContainer .innerContainer select option {
@@ -1511,6 +1593,276 @@ main .dashboard .orders table tr:nth-child(even) {
   color: #fff;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.editPage .editContainer .innerContainer .btn button:hover, .editPage .editContainer .innerContainer .btn button:focus, .editPage .editContainer .innerContainer .btn a:hover, .editPage .editContainer .innerContainer .btn a:focus {
+  opacity: .7;
+}
+
+.editPage .editContainer .innerContainer .btn button {
+  background-color: var(--bg-deep-green);
+}
+
+.deletePage {
+  width: calc(100vw - 220px);
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.deletePage .productcontainer {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.deletePage .productcontainer header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+.deletePage .productcontainer .edit-products {
+  margin-top: 2rem;
+  width: 80%;
+  height: 57%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0 2rem 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.deletePage .productcontainer .edit-products .img {
+  width: 79%;
+  height: 216px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: .5rem;
+}
+
+.deletePage .productcontainer .edit-products .img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.deletePage .productcontainer .edit-products .productSummary {
+  width: 90%;
+  text-align: center;
+}
+
+.deletePage .productcontainer .edit-products .productSummary h4 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.deletePage .productcontainer .edit-products .productSummary h2 {
+  display: inline-block;
+}
+
+.deletePage .productcontainer .edit-products .productSummary p {
+  display: inline-block;
+  font-size: .8rem;
+}
+
+.deletePage .productcontainer .edit-products .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.deletePage .productcontainer .edit-products .btn a {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #20b2aa;
+  color: #fff;
+  padding: .5rem 2.2rem;
+  margin-bottom: 0;
+}
+
+.deletePage .productcontainer .edit-products .btn a:hover, .deletePage .productcontainer .edit-products .btn a:focus {
+  opacity: .7;
+}
+
+.deletePage .productcontainer .edit-products .btn button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #20b2aa;
+  color: #fff;
+}
+
+.deletePage .productcontainer .edit-products .btn button:nth-child(2) {
+  background-color: red;
+  padding: .5rem 1.5rem;
+}
+
+.deletePage .productcontainer .edit-products .btn button:nth-child(1) {
+  padding: .5rem 2.2rem;
+}
+
+.deletePage .productcontainer .edit-products .btn button:hover, .deletePage .productcontainer .edit-products .btn button:focus {
+  opacity: .7;
+}
+
+.deletePage .editContainer {
+  width: 68%;
+  height: 100%;
+  padding: 4rem 0  4rem 5rem;
+}
+
+.deletePage .editContainer .innerContainer {
+  height: 100%;
+  width: 70%;
+  background-color: var(--bg-deep-yellow);
+  padding: 2rem 2rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.deletePage .editContainer .innerContainer label {
+  margin-bottom: .5rem;
+  font-size: .8rem;
+  color: #fff;
+}
+
+.deletePage .editContainer .innerContainer input {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding: .5rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--txt-deep-yellow);
+}
+
+.deletePage .editContainer .innerContainer input:focus, .deletePage .editContainer .innerContainer input:hover {
+  border: 1px solid var(--txt-deep-green);
+}
+
+.deletePage .editContainer .innerContainer select {
+  padding: .3rem .5rem;
+  width: 30%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--txt-deep-yellow);
+}
+
+.deletePage .editContainer .innerContainer select:focus, .deletePage .editContainer .innerContainer select:hover {
+  outline: none;
+  border: 1px solid var(--txt-deep-green);
+}
+
+.deletePage .editContainer .innerContainer select option {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 0px;
+}
+
+.deletePage .editContainer .innerContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.deletePage .editContainer .innerContainer div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.deletePage .editContainer .innerContainer input[type=file] {
+  background-color: var(--bg-light-white);
+}
+
+.deletePage .editContainer .innerContainer .btn {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.deletePage .editContainer .innerContainer .btn button, .deletePage .editContainer .innerContainer .btn a {
+  margin-top: 0rem;
+  padding: .7rem;
+  outline: none;
+  border: none;
+  background-color: black;
+  font-weight: medium;
+  line-height: 1.2rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deletePage .editContainer .innerContainer .btn button:hover, .deletePage .editContainer .innerContainer .btn button:focus, .deletePage .editContainer .innerContainer .btn a:hover, .deletePage .editContainer .innerContainer .btn a:focus {
+  opacity: .7;
+}
+
+.deletePage .editContainer .innerContainer .btn button.edit {
+  background-color: var(--bg-deep-green);
+}
+
+.deletePage .editContainer .innerContainer .btn button.delete {
+  background-color: red;
 }
 
 main .usersPage {
@@ -1583,7 +1935,7 @@ main .usersPage header .userdetails p {
 }
 
 main .usersPage header .userdetails p:hover, main .usersPage header .userdetails p:focus {
-  background-color: #ebebeb;
+  background-color: #fff;
   color: #20b2aa;
 }
 
@@ -1605,7 +1957,7 @@ main .usersPage header .userdetails a {
 }
 
 main .usersPage header .userdetails a:hover, main .usersPage header .userdetails a:focus {
-  background-color: #ebebeb;
+  background-color: #fff;
   color: #20b2aa;
 }
 
@@ -1630,7 +1982,7 @@ main .usersPage header .userdetails button {
 }
 
 main .usersPage header .userdetails button:hover, main .usersPage header .userdetails button:focus {
-  background-color: #ebebeb;
+  background-color: #fff;
   color: #20b2aa;
 }
 
@@ -1650,9 +2002,9 @@ main .usersPage .filterbtns {
 
 main .usersPage .filterbtns button {
   padding: .5rem 1rem;
-  color: #ebebeb;
+  color: var(--bg-light-grey);
   cursor: pointer;
-  background-color: blue;
+  background-color: var(--bg-light-green);
   border: none;
   outline: none;
   border-radius: 5px;
@@ -1666,7 +2018,7 @@ main .usersPage .filterbtns button i {
 main .usersPage .content {
   width: 100%;
   height: calc(100% - 8.5rem);
-  background-color: #fff;
+  background-color: var(--bg-light-white);
   padding: 1rem;
   overflow-y: auto;
   scrollbar-width: none;
@@ -1687,7 +2039,7 @@ main .usersPage .content table {
 main .usersPage .content table thead {
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  color: #20b2aa;
+  color: var(--txt-light-green);
 }
 
 main .usersPage .content table th {
@@ -1715,7 +2067,7 @@ main .usersPage .content table td a {
 }
 
 main .usersPage .content table td a:first-child {
-  background-color: #20b2aa;
+  background-color: var(--bg-light-green);
   margin-right: .2rem;
   padding: .2rem 1rem;
 }
@@ -1743,7 +2095,7 @@ main .usersPage .addUser {
 main .usersPage .addUser .userContainer {
   height: 80%;
   width: 50%;
-  background-color: #fff;
+  background-color: var(--bg-light-white);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1760,7 +2112,7 @@ main .usersPage .addUser .userContainer {
 main .usersPage .addUser .userContainer .header {
   margin-top: 0;
   width: 100%;
-  background-color: #20b2aa;
+  background-color: var(--bg-light-green);
   color: #ebebeb;
   height: 12%;
   display: -webkit-box;
@@ -1801,7 +2153,7 @@ main .usersPage .addUser .userContainer .body h4 {
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 1rem;
-  border-bottom: 3px solid #20b2aa;
+  border-bottom: 3px solid var(--bg-light-green);
 }
 
 main .usersPage .addUser .userContainer .body .box {
@@ -1843,7 +2195,7 @@ main .usersPage .addUser .userContainer .body input {
 }
 
 main .usersPage .addUser .userContainer .body input:focus, main .usersPage .addUser .userContainer .body input:hover {
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--bg-light-green);
 }
 
 main .usersPage .addUser .userContainer .body select {
@@ -1856,7 +2208,7 @@ main .usersPage .addUser .userContainer .body select {
 
 main .usersPage .addUser .userContainer .body select:focus, main .usersPage .addUser .userContainer .body select:hover {
   outline: none;
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--bg-light-green);
 }
 
 main .usersPage .addUser .userContainer .body select option {
@@ -1901,15 +2253,19 @@ main .usersPage .addUser .userContainer .footer button {
   padding: .5rem 1rem;
   color: #ebebeb;
   cursor: pointer;
-  background-color: blue;
+  background-color: var(--bg-light-green);
   border: none;
   outline: none;
   border-radius: 5px;
 }
 
 main .usersPage .addUser .userContainer .footer button:first-child {
-  background-color: #beb8b8;
+  background-color: var(--txt-dark);
   color: #fff;
+}
+
+main .usersPage .addUser .userContainer .footer button:hover, main .usersPage .addUser .userContainer .footer button:focus {
+  opacity: .7;
 }
 
 .editUser {
@@ -1982,7 +2338,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser header .userdetails p:hover, .editUser header .userdetails p:focus {
-  background-color: #ebebeb;
+  background-color: #fff;
   color: #20b2aa;
 }
 
@@ -2004,7 +2360,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser header .userdetails a:hover, .editUser header .userdetails a:focus {
-  background-color: #ebebeb;
+  background-color: #fff;
   color: #20b2aa;
 }
 
@@ -2029,14 +2385,14 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser header .userdetails button:hover, .editUser header .userdetails button:focus {
-  background-color: #ebebeb;
+  background-color: #fff;
   color: #20b2aa;
 }
 
 .editUser .editUserContainer {
   height: calc(100% - 6rem);
   width: 100%;
-  background-color: white;
+  background-color: #fff;
   padding: 3rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2051,7 +2407,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser .editUserContainer .profile h4 {
-  color: blue;
+  color: var(--bg-deep-green);
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -2059,7 +2415,6 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 .editUser .editUserContainer .profile .profilePic {
   height: 200px;
   width: 200px;
-  background-color: red;
 }
 
 .editUser .editUserContainer .profileDetails {
@@ -2123,7 +2478,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser .editUserContainer .profileDetails .left input:focus, .editUser .editUserContainer .profileDetails .left input:hover {
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--bg-light-green);
 }
 
 .editUser .editUserContainer .profileDetails .left select {
@@ -2136,7 +2491,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 
 .editUser .editUserContainer .profileDetails .left select:focus, .editUser .editUserContainer .profileDetails .left select:hover {
   outline: none;
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--bg-light-green);
 }
 
 .editUser .editUserContainer .profileDetails .left select option {
@@ -2195,12 +2550,11 @@ main .usersPage .addUser .userContainer .footer button:first-child {
       -ms-flex-pack: center;
           justify-content: center;
   text-transform: uppercase;
-  background-color: #beb8b8;
+  background-color: var(--bg-deep-grey);
 }
 
 .editUser .editUserContainer .profileDetails .left .box1 a:hover, .editUser .editUserContainer .profileDetails .left .box1 a:focus {
-  background-color: #ebebeb;
-  color: #20b2aa;
+  opacity: .7;
 }
 
 .editUser .editUserContainer .profileDetails .left .box1 button {
@@ -2218,7 +2572,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
   border-radius: 2px;
   border: none;
   outline: none;
-  background-color: blue;
+  background-color: var(--bg-light-green);
   color: #fff;
   font-size: .8rem;
   text-transform: uppercase;
@@ -2226,7 +2580,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser .editUserContainer .profileDetails .left .box1 button:hover, .editUser .editUserContainer .profileDetails .left .box1 button:focus {
-  background-color: #6492e7;
+  opacity: .7;
 }
 
 .editUser .editUserContainer .profileDetails .right {
@@ -2257,13 +2611,12 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser .editUserContainer .profileDetails .right input:focus, .editUser .editUserContainer .profileDetails .right input:hover {
-  border: 1px solid #20b2aa;
+  border: 1px solid var(--bg-light-green);
 }
 
 .editUser .editUserContainer .profileDetails .right button {
   margin-top: 3rem;
   padding: .5rem 1rem;
-  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2275,7 +2628,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
           justify-content: center;
   border: none;
   outline: none;
-  background-color: blue;
+  background-color: var(--bg-light-green);
   color: #fff;
   font-size: .8rem;
   text-transform: uppercase;
@@ -2284,7 +2637,7 @@ main .usersPage .addUser .userContainer .footer button:first-child {
 }
 
 .editUser .editUserContainer .profileDetails .right button:hover, .editUser .editUserContainer .profileDetails .right button:focus {
-  background-color: #6492e7;
+  opacity: .7;
 }
 
 .editUser .editUserContainer .profileDetails .right button.deleteAccount {
