@@ -1006,12 +1006,20 @@ main .dashboard{
         display: flex;
         align-items: center;
         margin: 1rem 0;
+        overflow-x: scroll;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
 
         button{
+            // height: ;
             padding: .5rem 1rem;
             color: $primarylight;
             cursor: pointer;
             background-color: seagreen;
+            word-wrap: nowrap;
             border: none;
             outline: none;
             border-radius: 5px;

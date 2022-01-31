@@ -1212,6 +1212,12 @@ main .dashboard .filterbtns {
       -ms-flex-align: center;
           align-items: center;
   margin: 1rem 0;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+main .dashboard .filterbtns::-webkit-scrollbar {
+  display: none;
 }
 
 main .dashboard .filterbtns button {
@@ -1219,6 +1225,7 @@ main .dashboard .filterbtns button {
   color: #ebebeb;
   cursor: pointer;
   background-color: seagreen;
+  word-wrap: nowrap;
   border: none;
   outline: none;
   border-radius: 5px;

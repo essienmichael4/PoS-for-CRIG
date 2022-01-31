@@ -2,6 +2,8 @@
             <header>
                 <h3>Dashboard</h3>
 
+                
+
                 <div class="userid"></div>
                 <div class="userdetails">
                     <p><?=$_SESSION["username"]?></p>
@@ -12,11 +14,17 @@
 
             <div class="filterbtns">
                 <button class="today">Today</button>
+                <button class="year">Today CPC</button>
+                <button class="year">Today CRIG</button>
                 <button class="week">This Week</button>
+                <button class="year">This Week CPC</button>
+                <button class="year">This Year CRIG</button>
                 <button class="month">This Month</button>
+                <button class="year">This Month CRIG</button>
+                <button class="year">This Month CPC</button>
                 <button class="year">This Year</button>
-                <!-- <button class="items">Products</button> -->
-                <!-- <button class="users">Users</button> -->
+                <button class="year">This Year CPC</button>
+                <button class="year">This Year CRIG</button>
             </div>
             
 

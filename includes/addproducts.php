@@ -7,7 +7,7 @@
         $price = (float)mysqli_real_escape_string($conn, $_POST["price"]);
         $stock = (int)mysqli_real_escape_string($conn, $_POST["stock"]);
         $productPic = $_FILES["productPic"];
-        // $category = mysqli_real_escape_string($conn, $_GET["category"]);
+        $category = mysqli_real_escape_string($conn, $_GET["category"]);
 
         if(empty($name)||empty($price)||empty($stock)){
             header("location: ../src/mainbody.php?pgname=inventorybody&error=nullInput");
@@ -30,8 +30,8 @@
                         $ppicNewName = $name.".".$ppicActExt;
                         $fileDes = '../assets/'.$ppicNewName;
 
-                        $sql = "INSERT INTO `products`(`productName`, `productPrice`, `stock`, `productPic`) 
-                        VALUES('$name',$price,$stock, '$ppicNewName')";
+                        $sql = "INSERT INTO `products`(`productName`, `productPrice`, `stock`, `productPic`, `category`) 
+                        VALUES('$name',$price,$stock, '$ppicNewName', '$category')";
 
                         if(mysqli_query($conn, $sql)){
                             move_uploaded_file($ppicTempName, $fileDes);
@@ -53,14 +53,16 @@
             }
         }
 
-
-        $sql = "INSERT INTO `products`(`productName`, `productPrice`, `stock`) 
-        VALUES('$name',$price,$stock)";
+        $productPic = "general.png";
+        $sql = "INSERT INTO `products`(`productName`, `productPrice`, `stock`, `category`,`productPic`,) 
+        VALUES('$name',$price,$stock, '$category', '$productPic')";
 
         if(mysqli_query($conn, $sql)){
             header("location:  ../src/mainbody.php?pgname=inventorybody&success=success");
+            exit();
         }else{
             header("location:  ../src/mainbody.php?pgname=inventorybody&error=error");
+            exit();
         }
 
         // echo $productPic;
