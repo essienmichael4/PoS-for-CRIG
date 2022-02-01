@@ -1,5 +1,5 @@
 <?php
-    include_once("./db.inc.php");
+    include_once("../../db.inc.php");
 
     $date = date('Y');
     $sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE `daybought` >= (Select date(curdate() - interval weekday(curdate()) day)) && `category` = 'cpc';";

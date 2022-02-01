@@ -14,17 +14,17 @@
 
             <div class="filterbtns">
                 <button class="today">Today</button>
-                <button class="year">Today CPC</button>
-                <button class="year">Today CRIG</button>
+                <button class="todaycpc">Today CPC</button>
+                <button class="todaycrig">Today CRIG</button>
                 <button class="week">This Week</button>
-                <button class="year">This Week(CPC)</button>
-                <button class="year">This Week(CRIG)</button>
+                <button class="weekcpc">This Week(CPC)</button>
+                <button class="weekcrig">This Week(CRIG)</button>
                 <button class="month">This Month</button>
-                <button class="year">This Month(CRIG)</button>
-                <button class="year">This Month(CPC)</button>
+                <button class="monthcrig">This Month(CRIG)</button>
+                <button class="monthcpc">This Month(CPC)</button>
                 <button class="year">This Year</button>
-                <button class="year">This Year(CPC)</button>
-                <button class="year">This Year(CRIG)</button>
+                <button class="yearcpc">This Year(CPC)</button>
+                <button class="yearcrig">This Year(CRIG)</button>
             </div>
             
 
@@ -81,6 +81,13 @@
         <script src="../js/todaySearches.js"></script>        
         <script src="../js/weekSearches.js"></script>        
         <script src="../js/monthSearches.js"></script>
-        <script src="../js/yearSearches.js"></script>
+        <script src="../js/todaycpc.js"></script>        
+        <script src="../js/weekcpc.js"></script>        
+        <script src="../js/monthcpc.js"></script>
+        <script src="../js/yearcpc.js"></script>
+        <script src="../js/todaycrig.js"></script>        
+        <script src="../js/weekcrig.js"></script>        
+        <script src="../js/monthcrig.js"></script>
+        <script src="../js/yearcrig.js"></script>
         
         

@@ -1,5 +1,5 @@
 <?php
-    include_once("./db.inc.php");
+    include_once("../../db.inc.php");
 
     $sql = "SELECT * FROM `orders` WHERE `daybought` >= (Select date(curdate() - interval weekday(curdate()) day)) && `category` = 'crig';";
     $output = "";

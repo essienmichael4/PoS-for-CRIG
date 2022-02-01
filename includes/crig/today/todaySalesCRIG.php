@@ -1,6 +1,6 @@
 <?php
 
-include_once("./db.inc.php");
+include_once("../../db.inc.php");
 
 $date = date('Y-m-d');
 $sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE daybought >= '$date' && `category` = 'crig';";

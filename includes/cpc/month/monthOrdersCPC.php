@@ -1,5 +1,5 @@
 <?php
-    include_once("./db.inc.php");
+    include_once("../../db.inc.php");
 
     $num = 0;
     $date = date('Y-m');

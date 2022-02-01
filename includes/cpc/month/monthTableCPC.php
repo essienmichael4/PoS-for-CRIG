@@ -1,5 +1,5 @@
 <?php
-    include_once("./db.inc.php");
+    include_once("../../db.inc.php");
 
     $date = date('Y-m');
     $sql = "SELECT * FROM `orders` WHERE `daybought` >= '{$date}' && `category` = 'cpc';";
