@@ -73,22 +73,22 @@
                     if($user["id"] == $_SESSION["uid"]){
                 ?>
                 <label for="">Old Password</label>
-                <input type="text" name="oldpassword" class="oldPassword">
+                <input type="password" name="oldpassword" class="oldPassword">
 
                 <label for="">New Password</label>
-                <input type="text" name="newpassword" class="newPassword">
+                <input type="password" name="newpassword" class="newPassword">
                         
                 <label for="">Confirm New Password</label>
-                <input type="text" name="npasswordRep" class="newPasswordRep">
+                <input type="password" name="npasswordRep" class="newPasswordRep">
                 <button class="changePassword">Change Password</button>
                 <?php
                     }else{
                 ?>
                 <label for="">New Password</label>
-                <input type="text" name="newpassword" class="newPassword">
+                <input type="password" name="newpassword" class="newPassword">
 
                 <label for="">Confirm New Password</label>
-                <input type="text" name="npasswordRep" class="newPasswordRep">
+                <input type="password" name="npasswordRep" class="newPasswordRep">
                 <button class="changePassword1">Change Password</button>
                 <?php
                     }
@@ -108,7 +108,7 @@
 
             <h3>Do you want to continue with this operation? This operation can't be reversed.</h3>
             <label for="">Enter Password to Confirm</label>
-                <input type="text" name="password" class="oldPassword">
+                <input type="password" name="password" class="oldPassword">
             <div class="box">
                 <a class="cancelbtn">Cancel</a>
                 <button type="submit" class="deletebtn">Delete This User Account</button>

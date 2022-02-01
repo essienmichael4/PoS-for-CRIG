@@ -120,15 +120,15 @@
                 <div class="box">
                     <div class="boxContainer">
                         <label for="">Password</label>
-                        <input type="text" name="password" class="password">
+                        <input type="password" name="password" class="password">
                     </div>
                     <div class="boxContainer">
                         <label for="">Password repeat</label>
-                        <input type="text" name="passwordRep" class="passwordRep">
+                        <input type="password" name="passwordRep" class="passwordRep">
                     </div>
                 </div>
 
-                <p class="err">Error: Form not submitted</p>
+                <p class="err"></p>
             </div>
 
             <div class="footer">
