@@ -17,7 +17,10 @@
 
     <main>
         <aside class="menu">
-            <h1>CRIG <span>- BUY PRODUCT </span></h1>
+            <div class="logo">
+                <img src="../assets/logo.jpg" alt="">
+                <h1>BUY PRODUCT Shop</h1>
+            </div>
 
             <nav>
                 <ul>

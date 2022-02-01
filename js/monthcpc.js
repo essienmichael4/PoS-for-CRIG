@@ -1,13 +1,13 @@
-let todaycrig = document.querySelector(".todaycrig");
+let monthcpc = document.querySelector(".monthcpc");
 
-todaycrig.addEventListener("click", ()=>{
+monthcpc.addEventListener("click", ()=>{
     let ordersList = document.querySelector(".ordersList");
     let order = document.querySelector(".order");
     let sale = document.querySelector(".sales");
     let item = document.querySelector(".item");
     
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "../includes/crig/today/todayTableCRIG.php", true);
+        xhr.open("GET", "../includes/cpc/month/monthTableCPC.php",true)
         xhr.onload = ()=>{
             if(xhr.readyState == XMLHttpRequest.DONE){
                 if(xhr.status == 200){
@@ -18,9 +18,8 @@ todaycrig.addEventListener("click", ()=>{
         }
         xhr.send()
 
-    
         let salexhr = new XMLHttpRequest();
-        salexhr.open("GET", "../includes/crig/today/todaySalesCRIG.php", true);
+        salexhr.open("GET", "../includes/cpc/month/monthSalesCPC.php",true)
         salexhr.onload = ()=>{
             if(salexhr.readyState == XMLHttpRequest.DONE){
                 if(salexhr.status == 200){
@@ -31,9 +30,8 @@ todaycrig.addEventListener("click", ()=>{
         }
         salexhr.send()
     
-
         let orderxhr = new XMLHttpRequest();
-        orderxhr.open("GET", "../includes/crig/today/todayOrdersCRIG.php", true);
+        orderxhr.open("GET", "../includes/cpc/month/monthOrdersCPC.php",true)
         orderxhr.onload = ()=>{
             if(orderxhr.readyState == XMLHttpRequest.DONE){
                 if(orderxhr.status == 200){
@@ -42,11 +40,10 @@ todaycrig.addEventListener("click", ()=>{
                 }
             }
         }
-        orderxhr.send();
-
-
+        orderxhr.send()
+    
         let itemxhr = new XMLHttpRequest();
-        itemxhr.open("GET", "../includes/crig/today/todayItemsCRIG.php", true);
+        itemxhr.open("GET", "../includes/cpc/month/monthItemsCPC.php",true)
         itemxhr.onload = ()=>{
             if(itemxhr.readyState == XMLHttpRequest.DONE){
                 if(itemxhr.status == 200){

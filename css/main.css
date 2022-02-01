@@ -60,17 +60,27 @@ main {
   width: 70px;
 }
 
-.menu h1 {
-  color: var(--bg-light-yellow);
-  font-size: 1rem;
-  margin: 2rem auto;
-  margin-left: 1rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.menu .logo {
+  margin-top: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu h1 span.active {
-  display: none;
+.menu .logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.menu .logo h1 {
+  color: var(--bg-light-yellow);
+  font-size: 1rem;
 }
 
 .menu .menuicon {

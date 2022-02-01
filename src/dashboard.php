@@ -2,8 +2,6 @@
             <header>
                 <h3>Dashboard</h3>
 
-                
-
                 <div class="userid"></div>
                 <div class="userdetails">
                     <p><?=$_SESSION["username"]?></p>
@@ -81,10 +79,13 @@
         <script src="../js/todaySearches.js"></script>        
         <script src="../js/weekSearches.js"></script>        
         <script src="../js/monthSearches.js"></script>
+        <script src="../js/yearsearches.js"></script>
+
         <script src="../js/todaycpc.js"></script>        
         <script src="../js/weekcpc.js"></script>        
         <script src="../js/monthcpc.js"></script>
         <script src="../js/yearcpc.js"></script>
+
         <script src="../js/todaycrig.js"></script>        
         <script src="../js/weekcrig.js"></script>        
         <script src="../js/monthcrig.js"></script>

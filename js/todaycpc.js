@@ -20,7 +20,7 @@ todaycpc.addEventListener("click", ()=>{
 
     
         let salexhr = new XMLHttpRequest();
-        salexhr.open("GET", "../includes/cpc/today/todaysSalesCPC.php", true);
+        salexhr.open("GET", "../includes/cpc/today/todaySalesCPC.php", true);
         salexhr.onload = ()=>{
             if(salexhr.readyState == XMLHttpRequest.DONE){
                 if(salexhr.status == 200){
@@ -33,7 +33,7 @@ todaycpc.addEventListener("click", ()=>{
     
 
         let orderxhr = new XMLHttpRequest();
-        orderxhr.open("GET", "../includes/cpc/today/todaysOrdersCPC.php", true);
+        orderxhr.open("GET", "../includes/cpc/today/todayOrdersCPC.php", true);
         orderxhr.onload = ()=>{
             if(orderxhr.readyState == XMLHttpRequest.DONE){
                 if(orderxhr.status == 200){
@@ -46,7 +46,7 @@ todaycpc.addEventListener("click", ()=>{
 
 
         let itemxhr = new XMLHttpRequest();
-        itemxhr.open("GET", "../includes/cpc/today/todaysItemsCPC.php", true);
+        itemxhr.open("GET", "../includes/cpc/today/todayItemsCPC.php", true);
         itemxhr.onload = ()=>{
             if(itemxhr.readyState == XMLHttpRequest.DONE){
                 if(itemxhr.status == 200){
