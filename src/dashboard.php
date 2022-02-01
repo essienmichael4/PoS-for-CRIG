@@ -2,7 +2,32 @@
             <header>
                 <h3>Dashboard</h3>
 
+                <div class="fulldate">
+                    <input type="date">
+                    <input type="date">
+                    <button class="dateSearch">search</button>
+                </div>
+                <div class="fullmonth">
+                    <input type="month">
+                    <input type="month">
+                    <button class="monthSearch">search</button>
+                </div>
+
+                <select name="selectCat" id="">
+                    <option value="All">All</option>
+                    <option value="crig">CRIG Products</option>
+                    <option value="cpc">CPC Products</option>
+                </select>
+
+                <div class="searchFilterBtn">
+                    <div class="toDay">D</div>
+                    <div class="toMonth">M</div>
+                    <div class="toYear">Y</div>
+                </div>
+                
+
                 <div class="userid"></div>
+                
                 <div class="userdetails">
                     <p><?=$_SESSION["username"]?></p>
                     <a href="?pgname=edituser&userid=<?=$_SESSION["uid"]?>">edit user</a>

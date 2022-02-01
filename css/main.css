@@ -1115,6 +1115,87 @@ main .dashboard header {
   margin-bottom: 1rem;
 }
 
+main .dashboard header .fulldate input {
+  cursor: pointer;
+  padding: .3rem 1rem;
+  outline: none;
+  border: 1px solid var(--bg-light-green);
+}
+
+main .dashboard header .fulldate input:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+main .dashboard header .fulldate button {
+  padding: .5rem 1rem;
+  outline: none;
+  background-color: var(--bg-deep-green);
+  border: none;
+  color: var(--bg-light-grey);
+  text-transform: uppercase;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+main .dashboard header .fullmonth {
+  display: none;
+}
+
+main .dashboard header .fullmonth input {
+  padding: .3rem 1rem;
+  outline: none;
+  border: 1px solid var(--bg-light-green);
+  cursor: pointer;
+}
+
+main .dashboard header .fullmonth input:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+main .dashboard header .fullmonth button {
+  padding: .5rem 1rem;
+  outline: none;
+  background-color: var(--bg-deep-green);
+  border: none;
+  color: var(--bg-light-grey);
+  text-transform: uppercase;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+main .dashboard header select {
+  border: 1px solid var(--bg-light-green);
+  padding: .35rem .5rem;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main .dashboard header .searchFilterBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+}
+
+main .dashboard header .searchFilterBtn .toMonth, main .dashboard header .searchFilterBtn .toDay, main .dashboard header .searchFilterBtn .toYear {
+  border: 1px solid var(--bg-light-green);
+  padding: .35rem .5rem;
+  outline: none;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+main .dashboard header .searchFilterBtn .toMonth:hover, main .dashboard header .searchFilterBtn .toDay:hover, main .dashboard header .searchFilterBtn .toYear:hover {
+  background-color: var(--bg-deep-green);
+  color: var(--bg-light-yellow);
+}
+
 main .dashboard header .userid {
   width: 50px;
   height: 50px;
