@@ -7,12 +7,14 @@
         $pStock = (int)mysqli_real_escape_string($conn, $_POST["pStock"]);
         $pname = mysqli_real_escape_string($conn,$_POST["pname"]);
         $ppic = mysqli_real_escape_string($conn, $_POST["ppic"]);
+        $pcategory = mysqli_real_escape_string($conn, $_POST["pcategory"]);
 
         $pid = (int)mysqli_real_escape_string($conn, $_POST["pid"]);
         $action = mysqli_real_escape_string($conn, $_POST["action"]);
         $name = mysqli_real_escape_string($conn,$_POST["name"]);
         $price = (float)mysqli_real_escape_string($conn, $_POST["price"]);
         $stock = (int)mysqli_real_escape_string($conn, $_POST["stock"]);
+        $category = (int)mysqli_real_escape_string($conn, $_POST["category"]);
         $totalStock = 0;
         $ppicTempName = "";
         
@@ -31,6 +33,12 @@
         }
         if($price == $pPrice){
             $price = $pPrice;
+        }
+
+        if($category == "None"){
+            $category = $pcategory;
+        }else if($category == $pcategory){
+            $category = $pcategory;
         }
         
         if($action == "None" && empty($stock)){
@@ -92,15 +100,15 @@
 
         if($productPic != $ppic){
             $sql = "INSERT INTO `productedits`(`productName`, `productPrice`, `instock`
-            ,`addedstock`, `totalstock`, `action`, `user`) VALUES('$name', $price, 
-            $pStock, $stock, $totalStock, '$action', '$user')";
+            ,`addedstock`, `totalstock`, `action`, `user`, `category`) VALUES('$name', $price, 
+            $pStock, $stock, $totalStock, '$action', '$user', '$category')";
             $fileDes = '../assets/'.$productPic;
             $delfileDes = '../assets/'.$ppic;
 
 
             if(mysqli_query($conn, $sql)){
                 $sql1 = "UPDATE `products`SET `productName` = '$name', `productPrice`= $price ,
-             `stock` = $totalStock, `productPic` = '$productPic' WHERE `id` = $pid";
+             `stock` = $totalStock, `productPic` = '$productPic', `category` = '$category' WHERE `id` = $pid";
                 if(mysqli_query($conn, $sql1)){
                     if($ppic != "general.png"){
                         unlink('../assets/'.$ppic);
@@ -117,12 +125,12 @@
             }
         }else{
             echo $sql = "INSERT INTO `productedits`(`productName`, `productPrice`, `instock`
-            ,`addedstock`, `totalstock`, `action`, `user`) VALUES('$name', $price, 
-            $pStock, $stock, $totalStock, '$action', '$user')";
+            ,`addedstock`, `totalstock`, `action`, `user`, `category`) VALUES('$name', $price, 
+            $pStock, $stock, $totalStock, '$action', '$user', '$category')";
 
             if(mysqli_query($conn, $sql)){
                 $sql1 = "UPDATE `products`SET `productName` = '$name', `productPrice`= $price ,
-             `stock` = $totalStock WHERE `id` = $pid";
+             `stock` = $totalStock, `category` = '$category' WHERE `id` = $pid";
                 if(mysqli_query($conn, $sql1)){
                     header("location:  ../src/mainbody.php?pgname=inventorybody&success=success");
                 }else{

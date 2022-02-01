@@ -34,15 +34,33 @@
                 <input type="text" name="pPrice" value="<?= $product["productPrice"] ?>" hidden>
                 <input type="text" name="ppic" value="<?= $product["productPic"] ?>" hidden>
                 <input type="text" name="pStock" value="<?= $product["stock"] ?>" hidden>
+                <input type="text" name="pcategory" value="<?= $product["category"] ?>" hidden>
                 <label for="">Product Name</label>
                     <input type="text" name="name" value="<?= $product["productName"] ?>">
 
-                    <label for="">Action Performed on Stock</label>
-                    <select name="action">
-                        <option>None</option>
-                        <option value="Add">add</option>
-                        <option value="Sub">subtract</option>
-                    </select>
+                    <div>
+                        <div>
+                            <label for="">Action Performed on Stock</label>
+                            <select name="action">
+                                <option>None</option>
+                                <option value="Add">add</option>
+                                <option value="Sub">subtract</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="">Change category</label>
+                            <select name="category">
+                                <option>None</option>
+                                <option value="crig">CRIG Product</option>
+                                <option value="cpc">CPC Product</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    
+                    
 
                     <div>
                         <div>

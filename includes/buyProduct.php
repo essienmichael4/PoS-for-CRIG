@@ -12,12 +12,13 @@
         $result = $conn->query($sql);
         $row = mysqli_fetch_assoc($result);
         $newStock = (int)$row["stock"] - (int)$product['count'];
+        $category = $row['category'];
 
         $pPrice = $product['basePrice'] * $product['count'];
 
         $sql1 = "INSERT INTO `orders`(`orderid`, `productId`, `productName`, `productPrice`, `stock`,
-         `totalPrice`, `basePrice`, `user`) VALUES('{$orderid}', {$product['id']}, '{$product['name']}',
-         {$pPrice}, {$product['count']}, {$totalCost}, {$product['basePrice']}, '{$user}');";
+         `totalPrice`, `basePrice`, `user`, `category`) VALUES('{$orderid}', {$product['id']}, '{$product['name']}',
+         {$pPrice}, {$product['count']}, {$totalCost}, {$product['basePrice']}, '{$user}', '{$category}');";
 
         if(mysqli_query($conn, $sql1)){
             $sql2 = "UPDATE `products` SET `stock` = {$newStock} WHERE `id` = {$product['id']};";

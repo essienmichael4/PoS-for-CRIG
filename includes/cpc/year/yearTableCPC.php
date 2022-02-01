@@ -1,7 +1,8 @@
 <?php
     include_once("./db.inc.php");
 
-    $sql = "SELECT * FROM `orders` WHERE `daybought` >= (Select date(curdate() - interval weekday(curdate()) day));";
+    $date = date('Y');
+    $sql = "SELECT * FROM `orders` WHERE `daybought` >= '{$date}' && `category` = 'cpc';";
     $output = "";
     $num = 0;
     $orderid = "";
@@ -28,5 +29,3 @@
     }
 
     echo $output;
-
-    // select date(curdate() - interval weekday(curdate()) day)
