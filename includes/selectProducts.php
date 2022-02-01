@@ -12,26 +12,27 @@
                 <input type="text" class="productId" value="'.
                 $products["id"]
                 .'" hidden>
+                <input type="text" class="productInputStock" value="'.
+                $products["stock"].'" hidden>
                 <input type="text" class="productImage" value="'.
                 $products["productPic"]
                 .'" hidden>
                 <div class="productImg">
-                <img src="
-                '.
-                $products["productPic"]
-                .'
-                " alt="">  
+                <img src="../assets/'.$products["productPic"].'" alt="">  
                 </div>
                 <div class="productSummary">
                     <h2 class="productName">'.
                     $products["productName"]
                     .'</h2>
-                    <p class="price">Gh¢ '.
+                    <p class="price">Gh¢ <span class="priceValue">'.
                     $products["productPrice"]
-                    .'</p>
-                    <i>'.
+                    .'</span></p>
+                    <i><span class="productStock">'.
                     $products["stock"]
-                    .' products left</i>
+                    .'</span> products left</i>
+                    <h3>'.
+                    $products["category"]
+                    .' product</h3>
                 </div>
             </li>
         ';

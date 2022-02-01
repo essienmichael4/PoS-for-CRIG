@@ -26,16 +26,16 @@
                     
                 </div>
 
-                <?php
+                <!-- <?php
                     include_once("../includes/db.inc.php");
 
                     $sql = 'SELECT * FROM `products` WHERE stock > 0;';
                     $result = $conn->query($sql);
-                ?>
+                ?> -->
 
                 <ul class="products">
 
-                    <?php
+                    <!-- <?php
                         while($products = $result->fetch_assoc()){
                     ?>
                         <li class="card product">
@@ -54,7 +54,7 @@
                         </li>
                     <?php
                         }
-                    ?>
+                    ?> -->
 
                 </ul>
             </div>
@@ -78,6 +78,6 @@
         </main>
 
         <script src="../js/todaysSales.js"></script>
-        <script src="../js/productutilities.js"></script>
         <script src="../js/products.js"></script>
+        <script src="../js/productutilities.js"></script>
         <script src="../js/utilities.js"></script>
