@@ -1055,10 +1055,12 @@ main .dashboard{
                 background-color: white;
                 cursor: pointer;
 
-                &:hover{
+                &:hover, &.active{
                     background-color: var(--bg-deep-green);
                     color: var(--bg-light-yellow);
                 }
+
+
             }
         }
 

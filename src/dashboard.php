@@ -25,7 +25,7 @@
                 </select>
 
                 <div class="searchFilterBtn">
-                    <div class="toDay">D</div>
+                    <div class="toDay active">D</div>
                     <div class="toMonth">M</div>
                     <div class="toYear">Y</div>
                 </div>

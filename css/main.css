@@ -1241,7 +1241,7 @@ main .dashboard header .searchFilterBtn .toMonth, main .dashboard header .search
   cursor: pointer;
 }
 
-main .dashboard header .searchFilterBtn .toMonth:hover, main .dashboard header .searchFilterBtn .toDay:hover, main .dashboard header .searchFilterBtn .toYear:hover {
+main .dashboard header .searchFilterBtn .toMonth:hover, main .dashboard header .searchFilterBtn .toMonth.active, main .dashboard header .searchFilterBtn .toDay:hover, main .dashboard header .searchFilterBtn .toDay.active, main .dashboard header .searchFilterBtn .toYear:hover, main .dashboard header .searchFilterBtn .toYear.active {
   background-color: var(--bg-deep-green);
   color: var(--bg-light-yellow);
 }
