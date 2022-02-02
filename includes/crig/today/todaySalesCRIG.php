@@ -1,12 +1,13 @@
 <?php
 
-include_once("../../db.inc.php");
+    include_once("../../db.inc.php");
 
-$date = date('Y-m-d');
-$sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE daybought >= '$date' && `category` = 'crig';";
+    $date = date('Y-m-d');
+    $sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE daybought >= '$date' && `category` = 'crig';";
 
-$result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-$row = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
 
-echo "Gh¢ {$row['sales']}.00";
+    $sales=number_format($row['sales'],2);
+    echo "Gh¢ {$sales}";

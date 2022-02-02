@@ -8,5 +8,5 @@
     $result = $conn->query($sql);
 
     $row = mysqli_fetch_assoc($result);
-
-    echo "Gh¢ {$row['sales']}.00";
+    $sales=number_format($row['sales'],2);
+    echo "Gh¢ {$sales}";
