@@ -6,14 +6,16 @@
     $category = $_POST["category"];
     $sql = "";
 
-    if(empty($firstdate)){
-        $firstdate = $seconddate." 00:00:00";
+    if(empty($seconddate)){
+        $seconddate = $firstdate."-31 23:59:59";
+    }else{
+        $seconddate = $seconddate."-31 23:59:59";
     }
 
-    if(empty($seconddate)){
-        $seconddate = $firstdate." 23:59:59";
+    if(empty($firstdate)){
+        $firstdate = $seconddate."-01 00:00:00";
     }else{
-        $seconddate = $seconddate." 23:59:59";
+        $firstdate = $firstdate."-01 00:00:00";
     }
 
     if($category == "all"){

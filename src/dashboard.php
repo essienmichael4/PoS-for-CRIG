@@ -8,8 +8,8 @@
                     <button class="dateSearch">search</button>
                 </div>
                 <div class="fullmonth">
-                    <input type="month">
-                    <input type="month">
+                    <input type="month" class="firstmonth">
+                    <input type="month" class="secondmonth">
                     <button class="monthSearch">search</button>
                 </div>
                 <div class="fullyear">
@@ -27,7 +27,7 @@
                 <div class="searchFilterBtn">
                     <div class="toDay active">D</div>
                     <div class="toMonth">M</div>
-                    <div class="toYear">Y</div>
+                    <!-- <div class="toYear">Y</div> -->
                 </div>
                 
 
