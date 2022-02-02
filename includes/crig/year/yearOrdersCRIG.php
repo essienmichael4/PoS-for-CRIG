@@ -2,7 +2,7 @@
     include_once("../../db.inc.php");
 
     $num = 0;
-    $date = date('Y');
+    $date = date('Y'."-01-01 00:00:00");
     $sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date' && `category` = 'crig'";
     $id = "";
 

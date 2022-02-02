@@ -7,7 +7,7 @@
     $orderid = uniqid("", true);
     
     foreach ($products as $product) {
-        $sql = "SELECT `stock` FROM `products` WHERE `id` = {$product['id']};";
+        $sql = "SELECT `stock`, `category` FROM `products` WHERE `id` = {$product['id']};";
 
         $result = $conn->query($sql);
         $row = mysqli_fetch_assoc($result);

@@ -1,11 +1,13 @@
 <?php
     include_once("./db.inc.php");
 
-    $date = date('Y-m');
+    $date = date('Y-m'."-01 00:00:00");
     $sql = "SELECT * FROM `orders` WHERE `daybought` >= '{$date}';";
     $output = "";
     $num = 0;
     $orderid = "";
+
+    $price = 0;
 
     $result = $conn->query($sql);
     while($order = $result->fetch_assoc()){
@@ -13,8 +15,9 @@
         if($orderid != $order["orderid"]){
             $num = $num+1;
         }
-        
-        $output .='
+
+        if($orderid != $order["orderid"]){
+            $output .='
             <tr>
                 <td>'.$num.'</td>
                 <td>'.$order["productName"].'</td>
@@ -23,7 +26,20 @@
                 <td class="tr">'.$order["productPrice"].'.00</td>
                 <td class="tr">'.$order["totalPrice"].'.00</td>
             </tr>
+            ';
+        }else{
+            $output .='
+            <tr>
+                <td>'.$num.'</td>
+                <td>'.$order["productName"].'</td>
+                <td>'.$order["stock"].'</td>
+                <td class="tr">'.$order["basePrice"].'.00</td>
+                <td class="tr">'.$order["productPrice"].'.00</td>
+                <td class="tr"></td>
+            </tr>
         ';
+        }     
+        
 
         $orderid = $order["orderid"];
     }

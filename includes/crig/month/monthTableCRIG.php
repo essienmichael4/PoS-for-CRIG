@@ -1,7 +1,7 @@
 <?php
     include_once("../../db.inc.php");
 
-    $date = date('Y-m');
+    $date = date('Y-m'."-01 00:00:00");
     $sql = "SELECT * FROM `orders` WHERE `daybought` >= '{$date}' && `category` = 'crig';";
     $output = "";
     $num = 0;
