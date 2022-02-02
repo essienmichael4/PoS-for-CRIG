@@ -3,8 +3,8 @@
                 <h3>Dashboard</h3>
 
                 <div class="fulldate active">
-                    <input type="date">
-                    <input type="date">
+                    <input type="date" class="firstdate">
+                    <input type="date" class="seconddate">
                     <button class="dateSearch">search</button>
                 </div>
                 <div class="fullmonth">
@@ -18,8 +18,8 @@
                     <button class="yearSearch">search</button>
                 </div>
 
-                <select name="selectCat" id="">
-                    <option value="All">All</option>
+                <select name="selectCat" id="category">
+                    <option value="all">All</option>
                     <option value="crig">CRIG Products</option>
                     <option value="cpc">CPC Products</option>
                 </select>
@@ -120,5 +120,9 @@
         <script src="../js/weekcrig.js"></script>        
         <script src="../js/monthcrig.js"></script>
         <script src="../js/yearcrig.js"></script>
+
+        <script src="../js/dayInputSearch.js"></script>        
+        <script src="../js/monthInputSearch.js"></script>
+        <script src="../js/yearInputSearch.js"></script>
         
         
