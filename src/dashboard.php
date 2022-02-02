@@ -2,7 +2,7 @@
             <header>
                 <h3>Dashboard</h3>
 
-                <div class="fulldate">
+                <div class="fulldate active">
                     <input type="date">
                     <input type="date">
                     <button class="dateSearch">search</button>
@@ -11,6 +11,11 @@
                     <input type="month">
                     <input type="month">
                     <button class="monthSearch">search</button>
+                </div>
+                <div class="fullyear">
+                    <input type="year">
+                    <input type="year">
+                    <button class="yearSearch">search</button>
                 </div>
 
                 <select name="selectCat" id="">

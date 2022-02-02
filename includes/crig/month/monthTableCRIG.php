@@ -14,7 +14,8 @@
             $num = $num+1;
         }
         
-        $output .='
+        if($orderid != $order["orderid"]){
+            $output .='
             <tr>
                 <td>'.$num.'</td>
                 <td>'.$order["productName"].'</td>
@@ -23,7 +24,19 @@
                 <td class="tr">'.$order["productPrice"].'.00</td>
                 <td class="tr">'.$order["totalPrice"].'.00</td>
             </tr>
+            ';
+        }else{
+            $output .='
+            <tr>
+                <td>'.$num.'</td>
+                <td>'.$order["productName"].'</td>
+                <td>'.$order["stock"].'</td>
+                <td class="tr">'.$order["basePrice"].'.00</td>
+                <td class="tr">'.$order["productPrice"].'.00</td>
+                <td class="tr"></td>
+            </tr>
         ';
+        }   
 
         $orderid = $order["orderid"];
     }

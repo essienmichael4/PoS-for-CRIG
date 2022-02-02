@@ -941,7 +941,10 @@ main .dashboard{
         margin-bottom: 1rem;
 
         .fulldate{
-            // border: 2px solid red;
+            display: none;
+            &.active{
+                display: flex;
+            }
 
             input{
                 cursor: pointer;
@@ -993,6 +996,42 @@ main .dashboard{
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
                 cursor: pointer;
+            }
+
+            &.active{
+                display: flex;
+            }
+        }
+
+        .fullyear{
+            display: none;
+
+            input{
+                padding: .3rem 1rem;
+                outline: none;
+                border:1px solid var(--bg-light-green);
+                cursor: pointer;
+                
+                &:first-child{
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+            }
+
+            button{
+                padding: .5rem 1rem;
+                outline: none;
+                background-color: var(--bg-deep-green);
+                border: none;
+                color: var(--bg-light-grey);
+                text-transform: uppercase;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                cursor: pointer;
+            }
+
+            &.active{
+                display: flex;
             }
         }
 

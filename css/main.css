@@ -1115,6 +1115,16 @@ main .dashboard header {
   margin-bottom: 1rem;
 }
 
+main .dashboard header .fulldate {
+  display: none;
+}
+
+main .dashboard header .fulldate.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main .dashboard header .fulldate input {
   cursor: pointer;
   padding: .3rem 1rem;
@@ -1165,6 +1175,46 @@ main .dashboard header .fullmonth button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: pointer;
+}
+
+main .dashboard header .fullmonth.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .dashboard header .fullyear {
+  display: none;
+}
+
+main .dashboard header .fullyear input {
+  padding: .3rem 1rem;
+  outline: none;
+  border: 1px solid var(--bg-light-green);
+  cursor: pointer;
+}
+
+main .dashboard header .fullyear input:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+main .dashboard header .fullyear button {
+  padding: .5rem 1rem;
+  outline: none;
+  background-color: var(--bg-deep-green);
+  border: none;
+  color: var(--bg-light-grey);
+  text-transform: uppercase;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+main .dashboard header .fullyear.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .dashboard header select {
