@@ -12,8 +12,8 @@ const totalSumPrice = ()=>{
         pricesum += product.price;
         
     })
-    sumofCartItems = pricesum;
-    return pricesum;
+    sumofCartItems = pricesum.toFixed(2);
+    return pricesum.toFixed(2);
 }
 
 function updateProducts(){
@@ -29,7 +29,7 @@ function updateProducts(){
 
                 <div class="cpdetails">
                     <h3>${product.name}</h3>
-                    <p>Gh¢ ${product.basePrice}</p>
+                    <p>Gh¢ ${product.basePrice.toFixed(2)}</p>
                 </div>
 
                 <div class="cptotal">
@@ -44,7 +44,7 @@ function updateProducts(){
                         <div class="added"><i class="fas fa-plus add" data-id="${product.id}"></i></div>
                     </div>
                     <div class="itemPrice">
-                        <h4>Gh¢ ${product.price}</h4>
+                        <h4>Gh¢ ${product.price.toFixed(2)}</h4>
                     </div>
                     
                 </div>
@@ -54,7 +54,6 @@ function updateProducts(){
         })
         cartBody.innerHTML = result.join('');
         totalPrice.textContent = `Total: Gh¢ `+totalSumPrice();
-        // console.log(result);
     }else{
         cartBody.innerHTML = "";
         totalPrice.textContent = "No products in cart.";
@@ -88,8 +87,8 @@ productsList.forEach(product => {
         let productsToCart = {
             id: productId,
             name: productName,
-            price: +productPrice,
-            basePrice: +productPrice,
+            price: productPrice,
+            basePrice: productPrice,
             count: 1,
             stock: +productStock
             ,image: productImage

@@ -31,7 +31,7 @@
                     <div>
                         <div>
                             <label for="">Product Price</label>
-                            <input type="number" name="price" placeholder="1">
+                            <input type="text" name="price" placeholder="1">
                         </div>
                         
                         <div>

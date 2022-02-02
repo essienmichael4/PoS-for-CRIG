@@ -105,6 +105,8 @@
         <script src="../js/todaySales.js"></script>
         <script src="../js/getTodaysOrders.js"></script>
         <script src="../js/utilities.js"></script>
+        <script src="../js/dashboardutilities.js"></script>
+
 
         <script src="../js/todaySearches.js"></script>        
         <script src="../js/weekSearches.js"></script>        

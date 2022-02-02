@@ -12,12 +12,12 @@
                 <div class="header">
                     <div class="totalSales">
                         <h4>Today's Sales</h4>
-                        <p class="sales">Gh¢ 00.00</p>
+                        <p class="sales"></p>
                     </div>
                     
                     <div class="totalItems">
                         <h4>Today's Orders</h4>
-                        <p class="order">0</p>
+                        <p class="order"></p>
                     </div>
 
                     <div class="numberSales active">

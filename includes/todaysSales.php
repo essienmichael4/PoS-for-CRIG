@@ -9,4 +9,4 @@ $result = $conn->query($sql);
 
 $row = mysqli_fetch_assoc($result);
 
-echo "Gh¢ {$row['sales']}.00";
+echo "Gh¢ {$row['sales']}";
