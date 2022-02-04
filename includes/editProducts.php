@@ -114,7 +114,7 @@
                         unlink('../assets/'.$ppic);
                     }
                     move_uploaded_file($ppicTempName , $fileDes);
-                    header("location:  ../src/mainbody.php?pgname=inventorybody&success=success");
+                    header("location:  ../src/mainbody.php?pgname=inventory&success=success");
                 }else{
                     header("location:  ../src/mainbody.php?pgname=edit&id=".$pid."&error=sqlError1");
                     exit();
@@ -132,7 +132,7 @@
                 $sql1 = "UPDATE `products`SET `productName` = '$name', `productPrice`= $price ,
              `stock` = $totalStock, `category` = '$category' WHERE `id` = $pid";
                 if(mysqli_query($conn, $sql1)){
-                    header("location:  ../src/mainbody.php?pgname=inventorybody&success=success");
+                    header("location:  ../src/mainbody.php?pgname=inventory&success=success");
                 }else{
                     header("location:  ../src/mainbody.php?pgname=edit&id=".$pid."&error=sqlError3");
                     exit();
@@ -160,7 +160,7 @@
                 if($ppic != "general.png"){
                     unlink('../assets/'.$ppic);
                 }
-                header("Location: ../src/mainbody.php?pgname=inventorybody");
+                header("Location: ../src/mainbody.php?pgname=inventory");
                 exit();
             
             }else{
