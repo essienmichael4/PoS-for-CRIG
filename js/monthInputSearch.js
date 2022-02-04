@@ -14,6 +14,9 @@ monthSearch.addEventListener("click", ()=>{
     let order = document.querySelector(".order");
     let sale = document.querySelector(".sales");
     let item = document.querySelector(".item");
+    let orderstitle = document.querySelector(".orderstitle");
+    let salestitle = document.querySelector(".salestitle");
+    let itemstitle = document.querySelector(".itemstitle");
     
     let params = "firstday="+firstmonth+"&secondday="+secondmonth+"&category="+category;
 
@@ -24,6 +27,7 @@ monthSearch.addEventListener("click", ()=>{
             if(xhr.readyState == XMLHttpRequest.DONE){
                 if(xhr.status == 200){
                     let data = xhr.response;
+                    orderstitle.textContent = "Month's Orders";
                     ordersList.innerHTML = data;
                 }
             }
@@ -37,6 +41,7 @@ monthSearch.addEventListener("click", ()=>{
             if(salexhr.readyState == XMLHttpRequest.DONE){
                 if(salexhr.status == 200){
                     let data = salexhr.response;
+                    salestitle.textContent = "Month's Sales";
                     sale.innerHTML = data;
                 }
             }

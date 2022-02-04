@@ -58,22 +58,22 @@
 
             <div class="headerContainer">
                 <div>
-                    <h4>Today's Sales</h4>
+                    <h4 class="salestitle">Today's Sales</h4>
                     <i class="fas fa-dollar-sign"></i>  
                     <p class="sales"></p>
                 </div>
                 <div>
-                    <h4>Today's Orders</h4>
+                    <h4 class="orderstitle">Today's Orders</h4>
                     <i class="fas fa-sort-amount-up-alt"></i>
                     <p class="order"></p>
                 </div>
                 <div>
-                    <h4>Items Bought</h4>
+                    <h4 class="itemstitle1">Items Bought</h4>
                     <i class="fas fa-cart-plus"></i>
                     <p class="item"></p>
                 </div>
                 <div>
-                    <h4>Items Left</h4>
+                    <h4 class="itemstitle2">Items Left</h4>
                     <i class="fas fa-cart-plus"></i>
                     <p class="itemLeft"></p>
                 </div>

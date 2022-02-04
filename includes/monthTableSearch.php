@@ -12,7 +12,7 @@
     $result = $conn->query($sql);
     while($order = $result->fetch_assoc()){
 
-        if($orid != $order["orderid"]){
+        if($orderid != $order["orderid"]){
             $num = $num+1;
         }
 
@@ -22,9 +22,9 @@
                 <td>'.$num.'</td>
                 <td>'.$order["productName"].'</td>
                 <td>'.$order["stock"].'</td>
-                <td class="tr">'.$order["basePrice"].'</td>
-                <td class="tr">'.$order["productPrice"].'</td>
-                <td class="tr">'.$order["totalPrice"].'</td>
+                <td class="tr">'.$order["basePrice"].'.00</td>
+                <td class="tr">'.$order["productPrice"].'.00</td>
+                <td class="tr">'.$order["totalPrice"].'.00</td>
             </tr>
             ';
         }else{
@@ -33,8 +33,8 @@
                 <td>'.$num.'</td>
                 <td>'.$order["productName"].'</td>
                 <td>'.$order["stock"].'</td>
-                <td class="tr">'.$order["basePrice"].'</td>
-                <td class="tr">'.$order["productPrice"].'</td>
+                <td class="tr">'.$order["basePrice"].'.00</td>
+                <td class="tr">'.$order["productPrice"].'.00</td>
                 <td class="tr"></td>
             </tr>
         ';
