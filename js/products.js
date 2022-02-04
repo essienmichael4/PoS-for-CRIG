@@ -122,7 +122,7 @@ cartBody.addEventListener("click",(e)=>{
             if(cartProducts[i].count <= 0){
                 cartProducts.splice(i, 1);
             }else if(closes){
-                cartProducts.splice(i, 1);
+                cartProducts[i].splice(i, 1);
             }
             updateProducts();
         }
