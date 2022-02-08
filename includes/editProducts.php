@@ -152,7 +152,7 @@
 
 
         $sql1 = "INSERT INTO `deletedproducts`(`productName`, `productId`, `deletedBy`) 
-        VALUES('$pname', $pid, '$name')";
+        VALUES('$pname', $pid, $user')";
 
         if(mysqli_query($conn, $sql1)){
             $sql2 = "DELETE FROM `products` WHERE `id` = $pid;";
@@ -170,11 +170,8 @@
         }else{
             header("Location: ../src/mainbody.php?pgname=delete&id=".$pid."&error=conn");
             exit();
-        }
-
-
-        
+        }    
     }
     else{
-        header("location: ../src/mainbody.php?pgname=inventorybody");
+        header("location: ../src/mainbody.php?pgname=inventory");
     }

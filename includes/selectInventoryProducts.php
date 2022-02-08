@@ -2,11 +2,6 @@
     include_once("./db.inc.php");
 
     $sql = 'SELECT * FROM `products`;';
-    // $output = '<li class="add-new-product">
-    // <i class="fas fa-plus"></i>
-    // <h4>Add new product</h4>
-    // </li>';
-
     $output = "";
 
     $sql1 = 'SELECT * FROM products;';

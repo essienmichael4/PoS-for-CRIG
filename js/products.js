@@ -22,7 +22,7 @@ function updateProducts(){
         let result = cartProducts.map(product=>{
             return`
                 <li>
-                <i class="fas fa-times closes"></i>
+                <i class="fas fa-times closes" data-id="${product.id}"></i>
                 <div class="cpimage">
                 <img src="../assets/${product.image}" alt="">
                 </div>
@@ -121,8 +121,8 @@ cartBody.addEventListener("click",(e)=>{
 
             if(cartProducts[i].count <= 0){
                 cartProducts.splice(i, 1);
-            }else if(closes){
-                cartProducts[i].splice(i, 1);
+            }else if(cartProducts[i].id == e.target.dataset.id && closes){
+                cartProducts.splice(i, 1);
             }
             updateProducts();
         }

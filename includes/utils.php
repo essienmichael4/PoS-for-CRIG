@@ -17,8 +17,6 @@ $allowedExt = array('jpg', 'jpeg', 'png');
                     $ppicNewName = $pid.".".$ppicActExt;
                     $fileDes = '../productProfile/'.$ppicNewName;
                     
-                    // updatePic($conn, $ppicNewName, $pid);
-                    
                     move_uploaded_file($ppicTempName, $fileDes);
                 }else {
                     header("Location: ../index.php?success=fileTooBig");

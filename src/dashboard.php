@@ -2,6 +2,10 @@
             <header>
                 <h3>Dashboard</h3>
 
+                <?php
+                    if($_SESSION["usertype"]=="admin" || $_SESSION["usertype"]=="superadmin"){
+                ?>
+
                 <div class="fulldate active">
                     <input type="date" class="firstdate">
                     <input type="date" class="seconddate">
@@ -27,9 +31,10 @@
                 <div class="searchFilterBtn">
                     <div class="toDay active">D</div>
                     <div class="toMonth">M</div>
-                    <!-- <div class="toYear">Y</div> -->
                 </div>
-                
+                <?php
+                    }
+                ?>
 
                 <div class="userid"></div>
                 
@@ -41,9 +46,14 @@
             </header>
 
             <div class="filterbtns">
+                <div class="leftbth"></div>
                 <button class="today">Today</button>
                 <button class="todaycpc">Today CPC</button>
                 <button class="todaycrig">Today CRIG</button>
+
+                <?php
+                    if($_SESSION["usertype"]=="admin" || $_SESSION["usertype"]=="superadmin"){
+                ?>
                 <button class="week">This Week</button>
                 <button class="weekcpc">This Week(CPC)</button>
                 <button class="weekcrig">This Week(CRIG)</button>
@@ -53,6 +63,11 @@
                 <button class="year">This Year</button>
                 <button class="yearcpc">This Year(CPC)</button>
                 <button class="yearcrig">This Year(CRIG)</button>
+                <div class="rightbtn"></div>
+
+                <?php
+                    }
+                ?>
             </div>
             
 
@@ -90,6 +105,7 @@
                             <th>Price of Item Gh¢</th>
                             <th>Price Gh¢</th>
                             <th>Total Price Gh¢</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody class="ordersList">
@@ -105,20 +121,26 @@
         <script src="../js/todaySales.js"></script>
         <script src="../js/getTodaysOrders.js"></script>
         <script src="../js/utilities.js"></script>
+        
+        <script src="../js/todaySearches.js"></script> 
+        <script src="../js/todaycpc.js"></script>
+        <script src="../js/todaycrig.js"></script>
+
+        <?php
+            if($_SESSION["usertype"]=="admin" || $_SESSION["usertype"]=="superadmin"){
+        ?>
         <script src="../js/dashboardutilities.js"></script>
-
-
-        <script src="../js/todaySearches.js"></script>        
+               
         <script src="../js/weekSearches.js"></script>        
         <script src="../js/monthSearches.js"></script>
         <script src="../js/yearsearches.js"></script>
 
-        <script src="../js/todaycpc.js"></script>        
+            
         <script src="../js/weekcpc.js"></script>        
         <script src="../js/monthcpc.js"></script>
         <script src="../js/yearcpc.js"></script>
 
-        <script src="../js/todaycrig.js"></script>        
+             
         <script src="../js/weekcrig.js"></script>        
         <script src="../js/monthcrig.js"></script>
         <script src="../js/yearcrig.js"></script>
@@ -126,5 +148,7 @@
         <script src="../js/dayInputSearch.js"></script>        
         <script src="../js/monthInputSearch.js"></script>
         <script src="../js/yearInputSearch.js"></script>
-        
+        <?php
+            }
+        ?>
         

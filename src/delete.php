@@ -61,7 +61,7 @@
                     <input type="file" name="productPic">
 
                     <div class="btn">
-                        <a href="?pgname=inventorybody">Cancel</a>
+                        <a href="?pgname=inventory">Cancel</a>
 
                         <button type="submit" class="edit" name="editProduct">Save Changes</button>
                         <button type="submit" class="delete" name="deleteProduct">Delete Product</button>

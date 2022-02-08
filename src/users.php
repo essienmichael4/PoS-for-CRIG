@@ -21,7 +21,7 @@
         if($_SESSION["usertype"] =="user"){
             $sql = "SELECT * FROM `admin` WHERE `usertype` = '{$_SESSION["usertype"]}';";
         }else if($_SESSION["usertype"] =="admin"){
-            $sql = "SELECT * FROM `admin` WHERE `usertype` = 'user' AND `usertype` = '{$_SESSION["usertype"]}';";
+            $sql = "SELECT * FROM `admin` WHERE `usertype` = 'user' OR `usertype` = '{$_SESSION["usertype"]}';";
         }else{
             $sql = "SELECT * FROM `admin`";
         }

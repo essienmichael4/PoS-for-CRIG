@@ -9,4 +9,4 @@
 
     $row = mysqli_fetch_assoc($result);
 
-    echo "{$row['items']}";
+    echo number_format("{$row['items']}");

@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRIG - Buy Products</title>
 
-    <script src="https://kit.fontawesome.com/92a1905d17.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/92a1905d17.js" crossorigin="anonymous"></script> -->
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
     </style> 
+
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -42,13 +45,15 @@
                             }else{
                                 echo '<li><a href="?pgname=inventory" class="linkItem"><i class="fas fa-tasks"></i><span>Inventory</span></a></li>';
                             }
+
+                            if($_GET['pgname']=="users" || $_GET['pgname']=="edituser"){
+                                echo '<li><a href="?pgname=users" class="linkItem active"><i class="fas fa-users"></i><span>Users</span></a></li>';
+                            }else{
+                                echo '<li><a href="?pgname=users" class="linkItem"><i class="fas fa-users"></i><span>Users</span></a></li>';
+                            }
                         }
                         
-                        if($_GET['pgname']=="users" || $_GET['pgname']=="edituser"){
-                            echo '<li><a href="?pgname=users" class="linkItem active"><i class="fas fa-users"></i><span>Users</span></a></li>';
-                        }else{
-                            echo '<li><a href="?pgname=users" class="linkItem"><i class="fas fa-users"></i><span>Users</span></a></li>';
-                        }
+                        
                     ?>
                 </ul>
             </nav>

@@ -23,6 +23,7 @@
                 <td class="tr">'.$order["basePrice"].'</td>
                 <td class="tr">'.$order["productPrice"].'</td>
                 <td class="tr">'.$order["totalPrice"].'</td>
+                <td class="tr"><button>Returned</button></td>
             </tr>
             ';
         }else{
@@ -34,6 +35,7 @@
                 <td class="tr">'.$order["basePrice"].'</td>
                 <td class="tr">'.$order["productPrice"].'</td>
                 <td class="tr"></td>
+                <td class="tr"><button>Returned</button></td>
             </tr>
         ';
         }   
