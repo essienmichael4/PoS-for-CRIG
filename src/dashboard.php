@@ -1,4 +1,5 @@
 <section class="dashboard">
+    <input type="text" class="user" value="<?=$_SESSION["username"]?>" hidden>
             <header>
                 <h3>Dashboard</h3>
 
@@ -120,7 +121,7 @@
 
         <script src="../js/todaySales.js"></script>
         <script src="../js/getTodaysOrders.js"></script>
-        <script src="../js/utilities.js"></script>
+        <!-- <script src="../js/utilities.js"></script> -->
         
         <script src="../js/todaySearches.js"></script> 
         <script src="../js/todaycpc.js"></script>
@@ -152,3 +153,4 @@
             }
         ?>
         
+        <script src="../js/utilities.js"></script>

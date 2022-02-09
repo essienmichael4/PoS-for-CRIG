@@ -3,7 +3,7 @@
 
     $num = 0;
     $date = date('Y-m'."-01 00:00:00");
-    $sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date' && `category` = 'crig'";
+    $sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date' AND `category` = 'crig' AND `action` = 'sold'";
     $id = "";
 
     $result = $conn->query($sql);

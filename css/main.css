@@ -1497,6 +1497,20 @@ main .dashboard .orders table td.tr {
   text-align: center;
 }
 
+main .dashboard .orders table td button {
+  padding: 0.3rem 1rem;
+  border: none;
+  color: white;
+}
+
+main .dashboard .orders table td .return {
+  background-color: green;
+}
+
+main .dashboard .orders table td .sold {
+  background-color: red;
+}
+
 main .dashboard .orders table tr:nth-child(even) {
   background-color: var(--bg-deep-grey);
 }

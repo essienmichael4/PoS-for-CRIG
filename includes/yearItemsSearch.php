@@ -2,7 +2,7 @@
     include_once("./db.inc.php");
 
     $date = date('Y');
-    $sql = "SELECT SUM(`stock`) as items FROM `orders` WHERE daybought >= '{$date}';";
+    $sql = "SELECT SUM(`stock`) as items FROM `orders` WHERE daybought >= '{$date}' AND `action` = 'sold';";
 
 
     $result = $conn->query($sql);

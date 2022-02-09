@@ -3,7 +3,7 @@
 
     $num = 0;
     $date = date('Y');
-    $sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date'";
+    $sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date' AND `action` = 'sold'";
     $id = "";
 
     $result = $conn->query($sql);

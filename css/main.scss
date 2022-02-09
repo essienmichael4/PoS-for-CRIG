@@ -1286,6 +1286,20 @@ main .dashboard{
                 &.tr{
                     text-align: center;
                 }
+                
+                button{
+                    padding: 0.3rem 1rem;
+                    border: none;
+                    color: white;
+                }
+
+                .return{
+                    background-color: green;
+                }
+
+                .sold{
+                    background-color: red;
+                }
             }
 
             tr:nth-child(even){

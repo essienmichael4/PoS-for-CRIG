@@ -6,6 +6,7 @@
     $output = "";
     $num = 0;
     $orderid = "";
+    $btn="";
 
     $result = $conn->query($sql);
     while($order = $result->fetch_assoc()){
@@ -15,6 +16,12 @@
         }
         
         if($orderid != $order["orderid"]){
+            if($order["action"] == "sold"){
+                $btn = '<button class="return" onclick="handleReturned('.$order["id"].')">Returned</button>';
+            }else{
+                $btn = '<button class="sold" onclick="handleSold('.$order["id"].')">Sold</button>';
+            }
+
             $output .='
             <tr>
                 <td>'.$num.'</td>
@@ -23,10 +30,19 @@
                 <td class="tr">'.$order["basePrice"].'</td>
                 <td class="tr">'.$order["productPrice"].'</td>
                 <td class="tr">'.$order["totalPrice"].'</td>
-                <td class="tr"><button>Returned</button></td>
+                <td class="tr">
+                    <div>
+                        <input type="text" name="id" value="'.$order["id"].'" hidden />'.$btn.'
+                    <div>
+                </td>
             </tr>
             ';
         }else{
+            if($order["action"] == "sold"){
+                $btn = '<button class="return" onclick="handleReturned('.$order["id"].')">Returned</button>';
+            }else{
+                $btn = '<button class="sold" onclick="handleSold('.$order["id"].')">Sold</button>';
+            }
             $output .='
             <tr>
                 <td>'.$num.'</td>
@@ -35,7 +51,11 @@
                 <td class="tr">'.$order["basePrice"].'</td>
                 <td class="tr">'.$order["productPrice"].'</td>
                 <td class="tr"></td>
-                <td class="tr"><button>Returned</button></td>
+                <td class="tr">
+                    <div>
+                        <input type="text" name="id" value="'.$order["id"].'" hidden />'.$btn.'
+                    <div>
+                </td>
             </tr>
         ';
         }   

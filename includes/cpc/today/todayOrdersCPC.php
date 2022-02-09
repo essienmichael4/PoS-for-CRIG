@@ -4,7 +4,7 @@ include_once("../../db.inc.php");
 
 $num = 0;
 $date = date('Y-m-d');
-$sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date' && `category` = 'cpc'";
+$sql = "SELECT `orderid` FROM `orders` WHERE daybought >= '$date' AND `category` = 'cpc' AND `action` = 'sold'";
 $id = "";
 
 $result = $conn->query($sql);

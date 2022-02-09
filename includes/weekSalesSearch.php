@@ -2,7 +2,7 @@
     include_once("./db.inc.php");
 
     $date = date('Y');
-    $sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE `daybought` >= (Select date(curdate() - interval weekday(curdate()) day));";
+    $sql = "SELECT SUM(`productPrice`) as sales FROM `orders` WHERE `daybought` >= (Select date(curdate() - interval weekday(curdate()) day)) AND `action` = 'sold';";
 
 
     $result = $conn->query($sql);
