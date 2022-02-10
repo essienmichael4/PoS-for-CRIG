@@ -14,7 +14,7 @@
         $name = mysqli_real_escape_string($conn,$_POST["name"]);
         $price = (float)mysqli_real_escape_string($conn, $_POST["price"]);
         $stock = (int)mysqli_real_escape_string($conn, $_POST["stock"]);
-        $category = (int)mysqli_real_escape_string($conn, $_POST["category"]);
+        $category = mysqli_real_escape_string($conn, $_POST["category"]);
         $totalStock = 0;
         $ppicTempName = "";
         
@@ -36,8 +36,6 @@
         }
 
         if($category == "None"){
-            $category = $pcategory;
-        }else if($category == $pcategory){
             $category = $pcategory;
         }
         

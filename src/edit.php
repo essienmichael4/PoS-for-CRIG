@@ -52,8 +52,8 @@
                             <label for="">Change category</label>
                             <select name="category">
                                 <option>None</option>
-                                <option value="crig">CRIG Product</option>
-                                <option value="cpc">CPC Product</option>
+                                <option value="CRIG">CRIG Product</option>
+                                <option value="CPC">CPC Product</option>
                             </select>
                         </div>
                     </div>

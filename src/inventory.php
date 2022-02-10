@@ -42,8 +42,8 @@
                     
                     <label for="">Category</label>
                     <select name="category" id="category">
-                        <option value="crig">CRIG Product</option>
-                        <option value="cpc">CPC Product</option>
+                        <option value="CRIG">CRIG Product</option>
+                        <option value="CPC">CPC Product</option>
                     </select>
                     
                     <label for="">Product Image</label>
