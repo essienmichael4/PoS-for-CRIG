@@ -83,12 +83,6 @@ main {
   font-size: 1rem;
 }
 
-.menu .menuicon {
-  position: absolute;
-  top: 1rem;
-  right: 0;
-}
-
 .menu nav {
   width: 100%;
 }
@@ -367,7 +361,6 @@ section .container .products .card {
 section .container .products .card .productImg {
   width: 90%;
   height: 174px;
-  background-color: red;
   z-index: 10;
   position: relative;
   top: -6rem;
@@ -401,10 +394,9 @@ section .container .products .card .productSummary {
 
 section .container .products .card .productSummary h2 {
   line-height: 1.5;
-  letter-spacing: .1rem;
   color: var(--txt-light);
   margin-bottom: .5rem;
-  font-size: 1rem;
+  font-size: .85rem;
   text-transform: capitalize;
   text-align: center;
 }

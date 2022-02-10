@@ -32,7 +32,7 @@
                     .'</span> products left</i>
                     <h3>'.
                     $products["category"]
-                    .' product</h3>
+                    .' Product</h3>
                 </div>
             </li>
         ';
