@@ -1,3 +1,5 @@
+<!-- Login view of the web app -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +25,7 @@
                 Log in
             </header>
             <?php
-
+            // Error handling for wrong username and password
                 if(isset($_GET["error"])){
                     if($_GET["error"] == "userNotExist"){
                         echo '<p class="active">User does not Exist</p>';
@@ -34,6 +36,7 @@
                     echo '<p></p>';
                 }
 
+                // Return of username if it exists
                 if(isset($_GET["user"])){
                     echo '<input type="text" name="username" placeholder="Username" value="'.$_GET["user"].'">';
                 }else{

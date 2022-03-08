@@ -1,4 +1,6 @@
+<!-- Edit page -->
     <?php
+    // Getting the information of the product to be edited
         include_once("../includes/db.inc.php");
         $id = $_GET["id"];
 
@@ -28,6 +30,7 @@
         </div>
         <form action="../includes/editProducts.php" method="POST" class="editContainer" enctype="multipart/form-data">
             <div class="innerContainer">
+                <!-- Storing info of the product to be checked against edited but hidden from view-->
                 <input type="text" name="user" value="<?= $_SESSION["username"] ?>" hidden>
                 <input type="text" name="pid" value="<?= $product["id"] ?>" hidden>
                 <input type="text" name="pname" value="<?= $product["productName"] ?>" hidden>
@@ -35,11 +38,15 @@
                 <input type="text" name="ppic" value="<?= $product["productPic"] ?>" hidden>
                 <input type="text" name="pStock" value="<?= $product["stock"] ?>" hidden>
                 <input type="text" name="pcategory" value="<?= $product["category"] ?>" hidden>
-                <label for="">Product Name</label>
+                
+                <!-- View seen by user -->
+                    <!-- Product name -->
+                    <label for="">Product Name</label>
                     <input type="text" name="name" value="<?= $product["productName"] ?>">
 
                     <div>
                         <div>
+                            <!-- Action to be performed on product quantity -->
                             <label for="">Action Performed on Stock</label>
                             <select name="action">
                                 <option>None</option>
@@ -48,6 +55,7 @@
                             </select>
                         </div>
 
+                        <!-- Category changing -->
                         <div>
                             <label for="">Change category</label>
                             <select name="category">
@@ -59,24 +67,28 @@
                     </div>
 
                     <div>
+                        <!-- Product Price -->
                         <div>
                             <label for="">Product Price</label>
                             <input type="number" name="price" value="<?= $product["productPrice"] ?>">
                         </div>
                         
+                        <!-- Product quantity -->
                         <div>
                             <label for="">Product Stock</label>
                             <input type="number" name="stock">
                         </div>
                     </div>
                     
-                    
+                    <!-- Product image -->
                     <label for="">Product Image</label>
                     <input type="file" name="productPic">
 
                     <div class="btn">
+                        <!-- Cancel Edit button -->
                         <a href="?pgname=inventory">Cancel</a>
 
+                        <!-- Edit button -->
                         <button type="submit" name="editProduct">Save Changes</button>
                     </div>
             </div>

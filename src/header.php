@@ -53,6 +53,10 @@
                                 echo '<li><a href="?pgname=users" class="linkItem"><i class="fas fa-users"></i><span>Users</span></a></li>';
                             }
                         }
+
+                        if($_SESSION["usertype"]=="superadmin"){
+                            echo '<li><a href="?pgname=analytics" class="linkItem active"><i class="fas fa-tachometer-alt"></i><span>Analytics</span></a></li>';
+                        }
                         
                         
                     ?>
