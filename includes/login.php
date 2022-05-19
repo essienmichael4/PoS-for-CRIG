@@ -7,8 +7,6 @@
     $result;
 
     if(!empty($username)|| !empty($pwd)){
-        echo $username;
-        echo $pwd;
         loginUser($username, $pwd, $conn);
     }else{
         echo "not working";

@@ -10,8 +10,6 @@ setInterval(()=>{
                 products.innerHTML = data;
             }
         }
-
-        
     }
     xhr.send()
 },500)

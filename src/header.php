@@ -55,7 +55,12 @@
                         }
 
                         if($_SESSION["usertype"]=="superadmin"){
-                            echo '<li><a href="?pgname=analytics" class="linkItem active"><i class="fas fa-tachometer-alt"></i><span>Analytics</span></a></li>';
+                            if($_GET['pgname']=="analytics"){
+                                echo '<li><a href="?pgname=analytics" class="linkItem active"><i class="fas fa-tachometer-alt"></i><span>Analytics</span></a></li>';
+                            }else{
+                                echo '<li><a href="?pgname=analytics" class="linkItem"><i class="fas fa-tachometer-alt"></i><span>Analytics</span></a></li>';
+                            }
+                            // echo '<li><a href="?pgname=analytics" class="linkItem active"><i class="fas fa-tachometer-alt"></i><span>Analytics</span></a></li>';
                         }
                         
                         

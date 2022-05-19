@@ -53,7 +53,6 @@
                 <?php
                     while($row = mysqli_fetch_assoc($result)){
 
-                
                 ?>
                 <tr>
                     <td><?=$row["username"]?></td>

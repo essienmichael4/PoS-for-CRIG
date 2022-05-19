@@ -8,8 +8,6 @@ let err = document.querySelector(".err");
 let userid = document.querySelector(".userid");
 let userdetails = document.querySelector(".userdetails");
 
-
-
 userid.addEventListener("click", ()=>{
     userid.classList.toggle("active");
 
